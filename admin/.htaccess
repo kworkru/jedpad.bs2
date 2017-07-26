@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Доступ запрещён!"
+AuthUserFile /Applications/AMPPS/www/carbazar.bs2/admin/.htpasswd
+Require valid-user

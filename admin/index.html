@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="description" content="Проверка истории автомобиля по VIN коду">
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/main.css">
+		<title>CheckAuto Cars Bazar::Manager Mode</title>
+	</head>
+	<body>
+		<div class="modal-window">
+			<div class="modal-window-wrapper">
+				<div class="close-button">
+					<i class="icon icon-close"></i>
+				</div>
+				<div id="modal1" class="modal-window-full-report">
+					<div class="modal-window-content">
+						<div class="vin-full-report">
+							<div class="water-marks">
+								<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
+								<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
+								<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
+								<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
+								<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
+								<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
+								<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
+								<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
+								<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
+								<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
+								<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
+								<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
+								<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
+								<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
+								<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
+							</div>
+							<h3 class="modal-window-title"></h3>
+							<div class="modal-window-container">
+								<div class="buttons-wrapper">
+									<a class="button print" href="#">Распечатать</a>
+									<a class="button pdf" href="#">Сохранить в PDF</a>
+								</div>
+								<div class="vin-full-report-container">
+									<h5 class="report-data-category">Общие сведения об автомобиле</h5>
+									<ul class="vin-report-list">
+										<li class="vin-report-data">
+											<span class="vin-report-data-title">VIN</span>
+											<span class="vin-report-data-value vechile-vin"></span>
+										</li>
+										<li class="vin-report-data">
+											<span class="vin-report-data-title">Модель</span>
+											<span class="vin-report-data-value vechile-model">Honda Civic</span>
+										</li>
+										<li class="vin-report-data">
+											<span class="vin-report-data-title">Год производства</span>
+											<span class="vin-report-data-value vechile-year">2008</span>
+										</li>
+										<li class="vin-report-data">
+											<span class="vin-report-data-title">Объем двигателя</span>
+											<span class="vin-report-data-value vechile-volume">1799 куб. см.</span>
+										</li>
+										<li class="vin-report-data">
+											<span class="vin-report-data-title">Мощность двигателя</span>
+											<span class="vin-report-data-value vechile-power">133 л.с. / 98 кВт</span>
+										</li>
+										<li class="vin-report-data">
+											<span class="vin-report-data-title">Цвет</span>
+											<span class="vin-report-data-value vechile-color">Серый</span>
+										</li>
+										<li class="vin-report-data">
+											<span class="vin-report-data-title">Комплектация</span>
+											<span class="vin-report-data-value vechile-complect">Седан</span>
+										</li>
+									</ul>
+									<h5 class="report-data-category">Данные таможни</h5>
+									<ul class="vin-report-list">
+										<li class="vin-report-data">
+											<span class="vin-report-data-title">Дата декларации</span>
+											<span class="vin-report-data-value vechile-customs-year">2008/10/06</span>
+										</li>
+										<li class="vin-report-data">
+											<span class="vin-report-data-title">Страна вывоз</span>
+											<span class="vin-report-data-value vechile-customs-country">Турция</span>
+										</li>
+									</ul>
+									<h5 class="report-data-category">Данные ОСАГО</h5>
+									<ul class="vin-report-list">
+										<li class="vin-report-data">
+											<span class="vin-report-data-title">Дата запроса действительности полиса</span>
+											<span class="vin-report-data-value osago-year">2008/10/06</span>
+										</li>
+										<li class="vin-report-data">
+											<span class="vin-report-data-title">Серия договора</span>
+											<span class="vin-report-data-value osago-series">ЕЕЕ</span>
+										</li>
+										<li class="vin-report-data">
+											<span class="vin-report-data-title">Номер договора</span>
+											<span class="vin-report-data-value osago-number">0385473973</span>
+										</li>
+										<li class="vin-report-data">
+											<span class="vin-report-data-title">Ограничения лиц допущенных к управлению ТС</span>
+											<span class="vin-report-data-value osago-restricts">С ограничениями</span>
+										</li>
+										<li class="vin-report-data">
+											<span class="vin-report-data-title">Страховая компания</span>
+											<span class="vin-report-data-value osago-company">РЕСО-гарантия</span>
+										</li>
+										<li class="vin-report-data">
+											<span class="vin-report-data-title">Примерная стоимость ОСАГО на 1 год</span>
+											<span class="vin-report-data-value osago-price">
+												10570 рублей
+												<a class="button" href="http://cars-bazar.ru/uslugi/osago/" target="_blank">Купить ОСАГО</a>
+											</span>
+										</li>
+									</ul>
+									<h5 class="report-data-category">Пробег автомобиля</h5>
+									<ul class="vin-report-list">
+										<li class="vin-report-data">
+											<span class="vin-report-data-title">Значение</span>
+											<span class="vin-report-data-value vechile-longs">Данные не зафиксированы</span>
+										</li>
+									</ul>
+									<h5 class="report-data-category">Сведения об участии в ДТП</h5>
+									<ul class="vin-report-list">
+										<li class="vin-report-data">
+											<span class="vin-report-data-value single dtp">Данные об участии в ДТП не найдены</span>
+										</li>
+										<li class="vin-report-data dtp-list">
+
+										</li>
+									</ul>
+									<h5 class="report-data-category">Количество владельцев</h5>
+									<ul class="vin-report-list">
+										<li class="vin-report-data">
+											<span class="vin-report-data-title">Владельцев</span>
+											<span class="vin-report-data-value history-count">-</span>
+										</li>
+									</ul>
+									<h5 class="report-data-category">История регистрационных действий</h5>
+									<ul class="vin-report-list history-list">
+
+									</ul>
+									<h5 class="report-data-category">Информация о розыске ТС, в системе МВД России</h5>
+									<ul class="vin-report-list">
+										<li class="vin-report-data">
+											<span class="vin-report-data-value single wanted">ГИБДД подтвердило, что автомобиль не числится в угоне</span>
+										</li>
+									</ul>
+									<h5 class="report-data-category">Информация о наложении ограничений в Госавтоинспекции на ТС</h5>
+									<ul class="vin-report-list">
+										<li class="vin-report-data">
+											<span class="vin-report-data-value single restrict">Ограничений нет (проверено в ГИБДД)</span>
+										</li>
+									</ul>
+									<h5 class="report-data-category">Утилизация</h5>
+									<ul class="vin-report-list">
+										<li class="vin-report-data">
+											<span class="vin-report-data-value single utilized">Автомобиль не был утилизирован (Проверено в ГИБДД)</span>
+										</li>
+									</ul>
+									<h5 class="report-data-category">Использование автомобиля в качестве такси</h5>
+									<ul class="vin-report-list">
+										<li class="vin-report-data">
+											<span class="vin-report-data-value single taxy">На автомобиль не выдавалась лицензия на такси</span>
+										</li>
+									</ul>
+									<h5 class="report-data-category">Информация о нахождении в залоге у банков</h5>
+									<ul class="vin-report-list zalog">
+										<li class="vin-report-data">
+											<span class="vin-report-data-title">Дата регистрации</span>
+											<span class="vin-report-data-value zalog-date">5.10.2015</span>
+										</li>
+										<li class="vin-report-data">
+											<span class="vin-report-data-title">Номер уведомления</span>
+											<span class="vin-report-data-value zalog-number">2015-000-953173-757</span>
+										</li>
+										<li class="vin-report-data">
+											<span class="vin-report-data-title">Имущество</span>
+											<span class="vin-report-data-value zalog-value" >VIN: NLAFD75308W072210</span>
+										</li>
+										<li class="vin-report-data">
+											<span class="vin-report-data-title">Залогодержатель</span>
+											<span class="vin-report-data-value zalog-debitor">Иванов Иван Иванович (02.04.1992)</span>
+										</li>
+										<li class="vin-report-data">
+											<span class="vin-report-data-title">Залогодатель</span>
+											<span class="vin-report-data-value zalog-creditor">Банк СОЮЗ (акционерное общество)</span>
+										</li>
+									</ul>
+								</div>
+								<div class="buttons-wrapper">
+									<a class="button print" href="#">Распечатать</a>
+									<a class="button pdf" href="#">Сохранить в PDF</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="modal2" class="modal-window-notification">
+					<div class="modal-window-content">
+						<div class="payment-notification">
+							<h3 class="modal-window-title">Формируется отчет</h3>
+							<div class="modal-window-container request-status">
+								<span class="modal-window-text">Ваш отчёт по VIN коду - Z8NBBUJ32BS024566 подготавливается.</span>
+								<span class="modal-window-text">Пожалуйста подождите, обычно это занимает не более 45 секунд.</span>
+							</div>
+						</div>
+						<div class="payment-status">
+							<div class="modal-window-container">
+								<div class="payment-status-icon">
+									<i class="icon icon-timer"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="modal3" class="modal-window-contact">
+					<div class="modal-window-content">
+						<div class="contact-form">
+							<h3 class="modal-window-title">Задайте вопрос</h3>
+							<div class="modal-window-container">
+								<span class="modal-window-text">С вами свяжутся в течении рабочего дня</span>
+								<form name="contact-form" method="POST">
+									<input name="name" class="text-input" placeholder="Введите ваше Имя*" type="text" required>
+									<input name="email" class="text-input" placeholder="Введите ваш E-Mail*" type="text" required>
+									<input name="phone" class="text-input" placeholder="Введите ваш Телефон*" type="text" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
+									<textarea name="message" class="text-input" rows="3" required></textarea>
+									<input class="button" value="Отправить" type="submit">
+								</form>
+								<span class="modal-window-text">Ваши данные не передаются третьим лицам</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-window-overlay"></div>
+		</div>
+		<a class="link open-modal" data-modal="#modal1" id="openreport" href="#"  style="display:none;">Посмотреть пример полного отчета</a>
+		<a class="link open-modal" data-modal="#modal2" id="waitreport" href="#"  style="display:none;">Формируем отчет</a>
+		<a class="link open-modal" data-modal="#modal3" id="successpayment" href="#"  style="display:none;">Оплата успешна</a>
+		<header class="header">
+			<div class="container">
+				<a class="site-logo" href="../index.html">
+					<img src="../img/site_logo.png" alt="">
+				</a>
+				<h2 class="site-description">
+					Проверка истории<br>
+					автомобиля по <span>VIN</span> коду
+				</h2>
+				<nav class="site-nav">
+					<div class="menu-button">
+						<i class="icon icon-hamburger"></i>
+					</div>
+					<ul class="site-nav-menu">
+						<li class="site-nav-menu-item">
+							<a href="../index.html#about">О нас</a>
+						</li>
+						<li class="site-nav-menu-item">
+							<a href="../faq.html">Частые вопросы</a>
+						</li>
+						<li class="site-nav-menu-item">
+							<a href="../conditions.html">Условия сервиса</a>
+						</li>
+						<li class="site-nav-menu-item dropdown">
+							<a href="../partnership.html">Партнёрство</a>
+							<ul class="dropdown-menu">
+								<li class="dropdown-menu-item">
+									<a href="../partnership1.html">Ссылка 1</a>
+								</li>
+								<li class="dropdown-menu-item">
+									<a href="../partnership2.html">Ссылка 2</a>
+								</li>
+								<li class="dropdown-menu-item">
+									<a href="../partnership3.html">Ссылка 3</a>
+								</li>
+								<li class="dropdown-menu-item">
+									<a href="../partnership4.html">Ссылка 4</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<section class="secondary-section">
+			<div class="container">
+				<h2 class="section-title">Полный отчёт</h2>
+				<h5 class="form-title">Проверить наличие данных по машине:</h5>
+				<span class="input-hint">Введите 17 знаков VIN:</span>
+				<form action="index.html">
+					<input name="vin" class="text-input" placeholder="X7MDC14BM90004876" type="text" maxlength="17" required>
+					<input class="button search" value="Проверить" type="submit">
+				</form>
+				<div class="vin-report" style="display:none;">
+					<h5 class="report-data-category">Общие сведения об автомобиле</h5>
+					<ul class="vin-report-list">
+						<li class="vin-report-data">
+							<span class="vin-report-data-title">Модель</span>
+							<span class="vin-report-data-value vechile-model"><img src="../img/loader.gif" style="height:1em"/></span>
+						</li>
+						<li class="vin-report-data">
+							<span class="vin-report-data-title">VIN</span>
+							<span class="vin-report-data-value vechile-vin"><img src="../img/loader.gif" style="height:1em"/></span>
+						</li>
+						<li class="vin-report-data">
+							<span class="vin-report-data-title">Год производства</span>
+							<span class="vin-report-data-value vechile-year"><img src="../img/loader.gif" style="height:1em"/></span>
+						</li>
+						<li class="vin-report-data">
+							<span class="vin-report-data-title">Цвет</span>
+							<span class="vin-report-data-value vechile-color"><img src="../img/loader.gif" style="height:1em"/></span>
+						</li>
+						<li class="vin-report-data">
+							<span class="vin-report-data-title">Мощность двигателя</span>
+							<span class="vin-report-data-value vechile-power"><img src="../img/loader.gif" style="height:1em"/></span>
+						</li>
+						<li class="vin-report-data">
+							<span class="vin-report-data-title">Объём двигателя</span>
+							<span class="vin-report-data-value vechile-volume"><img src="../img/loader.gif" style="height:1em"/></span>
+						</li>
+						<li class="vin-report-data">
+							<span class="vin-report-data-title">Комплектация автомобиля</span>
+							<span class="vin-report-data-value vechile-complect"><img src="../img/loader.gif" style="height:1em"/></span>
+						</li>
+						<li class="vin-report-data">
+							<span class="vin-report-data-title">Участие в ДТП</span>
+							<span class="vin-report-data-value vechile-dtp"><img src="../img/loader.gif" style="height:1em"/></span>
+						</li>
+						<li class="vin-report-data">
+							<span class="vin-report-data-title">Ограничения на регистрационные действия</span>
+							<span class="vin-report-data-value vechile-"><img src="../img/loader.gif" style="height:1em"/></span>
+						</li>
+						<li class="vin-report-data">
+							<span class="vin-report-data-title">Проверка на нахождение в залоге</span>
+							<span class="vin-report-data-value vechile-"><img src="../img/loader.gif" style="height:1em"/></span>
+						</li>
+						<li class="vin-report-data">
+							<span class="vin-report-data-title">Информация об угоне и розыске</span>
+							<span class="vin-report-data-value vechile-"><img src="../img/loader.gif" style="height:1em"/></span>
+						</li>
+						<li class="vin-report-data">
+							<span class="vin-report-data-title">Пробег машины</span>
+							<span class="vin-report-data-value vechile-"><img src="../img/loader.gif" style="height:1em"/></span>
+						</li>
+						<li class="vin-report-data">
+							<span class="vin-report-data-title">Количество владельцев ТС</span>
+							<span class="vin-report-data-value vechile-"><img src="../img/loader.gif" style="height:1em"/></span>
+						</li>
+						<li class="vin-report-data">
+							<span class="vin-report-data-title">История регистрационных действий</span>
+							<span class="vin-report-data-value vechile-"><img src="../img/loader.gif" style="height:1em"/></span>
+						</li>
+						<li class="vin-report-data">
+							<span class="vin-report-data-title">Сведения о страховке ОСАГО</span>
+							<span class="vin-report-data-value vechile-"><img src="../img/loader.gif" style="height:1em"/></span>
+						</li>
+						<li class="vin-report-data">
+							<span class="vin-report-data-title">Информация о утилизации</span>
+							<span class="vin-report-data-value vechile-"><img src="../img/loader.gif" style="height:1em"/></span>
+						</li>
+						<li class="vin-report-data">
+							<span class="vin-report-data-title">Статус владельца (физ / юр. лицо)</span>
+							<span class="vin-report-data-value vechile-"><img src="../img/loader.gif" style="height:1em"/></span>
+						</li>
+						<li class="vin-report-data">
+							<span class="vin-report-data-title">Использование в качестве такси</span>
+							<span class="vin-report-data-value vechile-"><img src="../img/loader.gif" style="height:1em"/></span>
+						</li>
+						<li class="vin-report-data">
+							<span class="vin-report-data-title">Таможенная история</span>
+							<span class="vin-report-data-value vechile-"><img src="../img/loader.gif" style="height:1em"/></span>
+						</li>
+						<li class="vin-report-data">
+							<span class="vin-report-data-title">Сведения о покупке в лизинг</span>
+							<span class="vin-report-data-value vechile-"><img src="../img/loader.gif" style="height:1em"/></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="check">
+			<div class="container">
+				<div class="check-form">
+					<h5 class="form-title">Проверить наличие данных по машине:</h5>
+					<span class="input-hint">Введите 17 знаков VIN:</span>
+					<form action="report.html">
+						<input name="vin" class="text-input" placeholder="X7MDC14BM90004876" type="text" maxlength="17" required>
+						<input class="button search" value="Проверить" type="submit">
+					</form>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-left clearfix">
+					<a class="site-logo" href="index.html">
+						<img src="../img/site_logo_dark.png" alt="">
+					</a>
+					<h2 class="site-description">
+						Проверка истории<br>
+						автомобиля по <span>VIN</span> коду
+					</h2>
+				</div>
+				<div class="footer-right">
+					<span>Контакты:</span>
+					<ul class="contact-info">
+						<li class="contact-info-item">
+							E-Mail:
+							<a class="link" href="mailto:info@cars-bazar.ru">info@cars-bazar.ru</a>
+						</li>
+						<li class="contact-info-item">
+							Телефон:
+							<span>8 800 555 55 55</span>
+						</li>
+						<li class="contact-info-item">
+							Или
+							<a class="link open-modal" data-modal="#modal3" href="#">напишите нам</a>
+						</li>
+						<li class="contact-info-item">
+							Техническая поддержка работает:
+							<span>Пн-Пт с 9 до 18 часов</span>
+						</li>
+					</ul>
+				</div>
+				<span class="copyright">
+					c) 2015 - 2017
+					<a class="link" href="index.html">checkauto.cars-bazar.ru</a>
+				</span>
+			</div>
+		</footer>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="../vendor/jquery.inputmask.bundle.min.js"></script>
+		<script src="../vendor/jspdf.min.js"></script>
+		<script src="../vendor/html2canvas.js"></script>
+		<script src="../js/main.js"></script>
+		<script src="../js/vin.js"></script>
+		<script>
+		//get query parameters
+		var qp = {};
+		var __p = window.location.href.match(/\?(.+)$/);
+		if(__p!=null&&__p.length>1){
+			var __a = __p[1].split(/\&/);
+			for(var i in  __a){
+				var nv = __a[i].split(/=/);
+				qp[nv[0]] = decodeURIComponent(nv[1].replace(/\+/ig," "));
+			}
+		}
+		$(document).ready(function(){
+			$(".pdf").on("click",function(e){
+				//makePDF(siteLogo,qp.vin);
+		        window.open("../pdf.php?cb_order_id="+qp.cb_order_id,"__blank");
+			});
+			if(typeof(qp.vin)!="undefined"){
+				var timerId = 0;
+				$.ajax({
+					url:"report.php?type=full&vin="+qp.vin,
+					dataType:"json",
+					beforeSend:function(){
+						$(".vin-report").hide();
+						$(".request-status").html('<span class="modal-window-text">Ваш отчёт по VIN коду - '+qp.vin+' подготавливается.</span>'
+							+'<span class="modal-window-text">Пожалуйста подождите, идет обработка запроса.<br />Ожидаемое время формирования через: <span class="request-status-timer">45</span> секунд.</span>'
+						);
+						$("#waitreport").click();
+						//$(".request-status").html("<img src='../img/loader.gif' style='height:1.2em;' /> <br />Идет обработка запроса. Ожидаемое время формирования через: <span class='request-status-timer'>45</span> сек.");
+						timerId = setInterval(function(){
+							var cv =parseInt($(".request-status-timer").text());
+							cv--;
+							$(".request-status-timer").text(cv);
+							if(cv == 0 ){
+								$(".request-status").html(
+									'<span class="modal-window-text">Ваш отчёт по VIN коду - '+qp.vin+' все еще формируется.</span>'
+										+'<span class="modal-window-text">"В данный момент очень много запросов к нашей системе.<br />Пожалуй, нам нужно еще <span class="request-status-timer">30</span> секунд.</span>'
+
+								)
+							}
+
+						},1000);
+					},
+					success:function(d){
+						if(d.status=="notpayed"){
+	                        $(".request-status").html('<span class="modal-window-text">Полный отчёт по VIN коду - <b>'+qp.vin+'</b>, не оплачен.</span>');
+	                        return;
+	                    }
+	                    else if(d.status=="notfound"){
+	                        $(".request-status").html('<span class="modal-window-text">Данный VIN код - <b>'+qp.vin+'</b>, не числится в Базе Данных ГИБДД.</span>');
+	                        return;
+	                    }
+						try{
+							getFullReport(d,true);
+						}
+						catch(e){
+							console.debug(e);
+							$(".request-status").html(
+								'<span class="modal-window-text">Ваш отчёт по VIN коду - '+qp.vin+' не сформировалася.</span>'
+								+'<button class="button" onclick="document.location.reload();">Повторить попытку</button>'
+
+							)
+						}
+
+					},
+					complete:function(){
+						clearInterval(timerId);
+						//$(".request-status").html("");
+					}
+				});
+			}
+		});
+		</script>
+	</body>
+</html>
