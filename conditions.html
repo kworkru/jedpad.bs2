@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="description" content="Проверка истории автомобиля по VIN коду">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+		<title>CheckAuto Cars Bazar</title>
+	</head>
+	<body>
+		<div class="modal-window">
+			<div class="modal-window-wrapper">
+				<div class="close-button">
+					<i class="icon icon-close"></i>
+				</div>
+				<div id="modal4" class="modal-window-full-report">
+					<div class="modal-window-content">
+						<div class="water-marks">
+							<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
+							<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
+							<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
+							<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
+							<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
+						</div>
+						<div class="vin-full-report">
+							<h3 class="modal-window-title">Пример полного отчёта по VIN коду - КNАDН511ВА6672755</h3>
+							<div class="modal-window-container">
+								<div class="buttons-wrapper">
+									<a class="button print" href="#">Посмотреть версию для печати</a>
+									<a class="button pdf" href="/store/КNАDН511ВА6672755.pdf">Посметреть PDF версию отчета</a>
+								</div>
+								<div class="vin-full-report-container"><h5 class="report-data-category">Общие сведения об автомобиле</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-title">Модель</span><span class="vin-report-data-value vehicle-model">КИАРИО</span></li><li class="vin-report-data"><span class="vin-report-data-title">VIN</span><span class="vin-report-data-value vehicle-vin">КNАDН511ВА6672755</span></li><li class="vin-report-data"><span class="vin-report-data-title">Год производства</span><span class="vin-report-data-value vehicle-year">2010</span></li><li class="vin-report-data"><span class="vin-report-data-title">Цвет</span><span class="vin-report-data-value vehicle-color">СИНИЙ</span></li><li class="vin-report-data"><span class="vin-report-data-title">Мощность двигателя</span><span class="vin-report-data-value vehicle-powerHp">97 л.с.</span></li><li class="vin-report-data"><span class="vin-report-data-title">Объём двигателя</span><span class="vin-report-data-value vehicle-engineVolume">1399 куб. см.</span></li><li class="vin-report-data"><span class="vin-report-data-title">Тип</span><span class="vin-report-data-value vehicle-category">Легковые автомобили, небольшие грузовики (до 3,5 тонн)</span></li></ul><h5 class="report-data-category">Данные таможни</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-title">Дата декларации</span><span class="vin-report-data-value customs-date">2010</span></li><li class="vin-report-data"><span class="vin-report-data-title">Страна вывоз</span><span class="vin-report-data-value customs-country">Южная Корея</span></li></ul><h5 class="report-data-category">Данные ОСАГО</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-title">Дата запроса действительности полиса</span><span class="vin-report-data-value osago-date">2017/05/14</span></li><li class="vin-report-data"><span class="vin-report-data-title">Серия договора</span><span class="vin-report-data-value osago-policyBsoSerial">ЕЕЕ</span></li><li class="vin-report-data"><span class="vin-report-data-title">Номер договора</span><span class="vin-report-data-value osago-policyBsoNumber">0903950818</span></li><li class="vin-report-data"><span class="vin-report-data-title">Ограничения лиц допущенных к управлению ТС</span><span class="vin-report-data-value osago-policyIsRestrict">Без ограничений</span></li><li class="vin-report-data"><span class="vin-report-data-title">Страховая компания</span><span class="vin-report-data-value osago-insCompanyName">РЕСО-Гарантия</span></li></ul><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-title">Примерная стоимость ОСАГО на 1 год</span><span class="vin-report-data-value osago-price">7840.80<a class="button" href="http://cars-bazar.ru/uslugi/osago/" target="_blank">Купить ОСАГО</a></span></li></ul><h5 class="report-data-category" style="background-color:#19b689;">Рыночная стоимость</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-title">Примерная стоимость</span><span class="vin-report-data-value data-value">от 690 536 руб. до 986 480 руб.</span></li></ul><h5 class="report-data-category">Пробег автомобиля</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-title">Значение</span><span class="vin-report-data-value data-value">Данные не зафиксированы</span></li></ul><h5 class="report-data-category">Сведения об участии в ДТП</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-value single">Данные не зафиксированы</span><span class="vin-report-data-hint">Мы не смогли найти факты, которые указывают на наличие ДТП.<br>Тем не менее, это не означает, что данный автомобиль НЕ УЧАСТВОВАЛ в ДТП</span></li></ul><h5 class="report-data-category">Количество владельцев</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-title">Владельцев</span><span class="vin-report-data-value data-value">1</span></li></ul><h5 class="report-data-category">История регистрационных действий</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-title">Дата последней операции</span><span class="vin-report-data-value data-value">По текущий момент</span></li></ul><h5 class="report-data-category">Информация о розыске ТС, в системе МВД России</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-value single">ГИБДД подтвердило, что автомобиль не числится в угоне</span></li></ul><h5 class="report-data-category">Информация о наложении ограничений в Госавтоинспекции на ТС</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-value single">Информация об ограничении 54#SP1133075</span></li><li class="vin-report-data"><span class="vin-report-data-title">Марка (модель) ТС</span><span class="vin-report-data-value data-value">КИА РИО</span></li><li class="vin-report-data"><span class="vin-report-data-title">Год выпуска ТС</span><span class="vin-report-data-value data-value">2010&nbsp;г.</span></li><li class="vin-report-data"><span class="vin-report-data-title">Дата наложения ограничения</span><span class="vin-report-data-value data-value">14.03.2017</span></li><li class="vin-report-data"><span class="vin-report-data-title">Регион инициатора ограничения</span><span class="vin-report-data-value data-value">Новосибирская область</span></li><li class="vin-report-data"><span class="vin-report-data-title">Кем наложено ограничение</span><span class="vin-report-data-value data-value">Судебный пристав</span></li><li class="vin-report-data"><span class="vin-report-data-title">Вид ограничения</span><span class="vin-report-data-value data-value">Запрет на регистрационные действия</span></li><li class="vin-report-data"><span class="vin-report-data-title">Основания ограничения</span><span class="vin-report-data-value data-value">Документ: 102775493/5443 от 14.03.2017, Зульфалиева Юлия Игоревна, СПИ: 50431010626517, ИП:[Номер ИП скрыт] от 11.01.2017</span></li></ul><h5 class="report-data-category">Утилизация</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-value single">Автомобиль не был утилизирован (Проверено в ГИБДД)</span></li></ul><h5 class="report-data-category">Использование автомобиля в качестве такси</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-value single">На автомобиль не выдавалась лицензия на такси</span></li></ul><h5 class="report-data-category">Информация о нахождении в залоге у банков</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-value single">Данный автомобиль не числится в залоге</span></li></ul></div>
+								<div class="buttons-wrapper">
+									<a class="button print" href="#">Посмотреть версию для печати</a>
+									<a class="button pdf" href="/store/КNАDН511ВА6672755.pdf">Посметреть PDF версию отчета</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="modal1" class="modal-window-full-report">
+					<div class="modal-window-content">
+						<div class="vin-full-report">
+							<h3 class="modal-window-title">Получен полный отчёт по VIN коду - Z8NBBUJ32BS024566</h3>
+							<div class="modal-window-container">
+								<div class="buttons-wrapper">
+									<a class="button print" href="#">Распечатать</a>
+									<a class="button pdf" href="#">Сохранить в PDF</a>
+								</div>
+								<h5 class="report-data-category">Общие сведения об автомобиле</h5>
+								<ul class="vin-report-list">
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">VIN</span>
+										<span class="vin-report-data-value">Z8NBBUJ32BS024566</span>
+									</li>
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Модель</span>
+										<span class="vin-report-data-value">Honda Civic</span>
+									</li>
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Год производства</span>
+										<span class="vin-report-data-value">2008</span>
+									</li>
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Объем двигателя</span>
+										<span class="vin-report-data-value">1799 куб. см.</span>
+									</li>
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Мощность двигателя</span>
+										<span class="vin-report-data-value">133 л.с. / 98 кВт</span>
+									</li>
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Цвет</span>
+										<span class="vin-report-data-value">Серый</span>
+									</li>
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Комплектация</span>
+										<span class="vin-report-data-value">Седан</span>
+									</li>
+								</ul>
+								<h5 class="report-data-category">Данные таможни</h5>
+								<ul class="vin-report-list">
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Дата декларации</span>
+										<span class="vin-report-data-value">2008/10/06</span>
+									</li>
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Страна вывоз</span>
+										<span class="vin-report-data-value">Турция</span>
+									</li>
+								</ul>
+								<h5 class="report-data-category">Данные ОСАГО</h5>
+								<ul class="vin-report-list">
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Дата запроса действительности полиса</span>
+										<span class="vin-report-data-value">2008/10/06</span>
+									</li>
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Серия договора</span>
+										<span class="vin-report-data-value">ЕЕЕ</span>
+									</li>
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Номер договора</span>
+										<span class="vin-report-data-value">0385473973</span>
+									</li>
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Ограничения лиц допущенных к управлению ТС</span>
+										<span class="vin-report-data-value">С ограничениями</span>
+									</li>
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Страховая компания</span>
+										<span class="vin-report-data-value">РЕСО-гарантия</span>
+									</li>
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Примерная стоимость ОСАГО на 1 год</span>
+										<span class="vin-report-data-value">
+											10570 рублей
+											<a class="button" href="http://cars-bazar.ru/uslugi/osago/" target="_blank">Купить ОСАГО</a>
+										</span>
+									</li>
+								</ul>
+								<h5 class="report-data-category">Пробег автомобиля</h5>
+								<ul class="vin-report-list">
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Значение</span>
+										<span class="vin-report-data-value">Данные не зафиксированы</span>
+									</li>
+								</ul>
+								<h5 class="report-data-category">Сведения об участии в ДТП</h5>
+								<ul class="vin-report-list">
+									<li class="vin-report-data">
+										<span class="vin-report-data-value single">Данные об участии в ДТП не найдены</span>
+									</li>
+									<li class="vin-report-data">
+										<span class="vin-report-data-hint">
+											Мы не смогли найти факты, которые указывают на наличие ДТП.<br>
+											Тем не менее, это не означает, что данный автомобиль НЕ УЧАСТВОВАЛ в ДТП
+										</span>
+									</li>
+								</ul>
+								<h5 class="report-data-category">Количество владельцев</h5>
+								<ul class="vin-report-list">
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Владельцев</span>
+										<span class="vin-report-data-value">4</span>
+									</li>
+								</ul>
+								<h5 class="report-data-category">История регистрационных действий</h5>
+								<ul class="vin-report-list">
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Дата последней операции</span>
+										<span class="vin-report-data-value">2008-11-11</span>
+									</li>
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Дата последней операции</span>
+										<span class="vin-report-data-value">2014-05-02</span>
+									</li>
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Дата последней операции</span>
+										<span class="vin-report-data-value">2015-10-08</span>
+									</li>
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Дата последней операции</span>
+										<span class="vin-report-data-value">2015-10-08</span>
+									</li>
+								</ul>
+								<h5 class="report-data-category">Информация о розыске ТС, в системе МВД России</h5>
+								<ul class="vin-report-list">
+									<li class="vin-report-data">
+										<span class="vin-report-data-value single">ГИБДД подтвердило, что автомобиль не числится в угоне</span>
+									</li>
+								</ul>
+								<h5 class="report-data-category">Информация о наложении ограничений в Госавтоинспекции на ТС</h5>
+								<ul class="vin-report-list">
+									<li class="vin-report-data">
+										<span class="vin-report-data-value single">Ограничений нет (проверено в ГИБДД)</span>
+									</li>
+								</ul>
+								<h5 class="report-data-category">Утилизация</h5>
+								<ul class="vin-report-list">
+									<li class="vin-report-data">
+										<span class="vin-report-data-value single">Автомобиль не был утилизирован (Проверено в ГИБДД)</span>
+									</li>
+								</ul>
+								<h5 class="report-data-category">Использование автомобиля в качестве такси</h5>
+								<ul class="vin-report-list">
+									<li class="vin-report-data">
+										<span class="vin-report-data-value single">На автомобиль не выдавалась лицензия на такси</span>
+									</li>
+								</ul>
+								<h5 class="report-data-category">Информация о нахождении в залоге у банков</h5>
+								<ul class="vin-report-list">
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Дата регистрации</span>
+										<span class="vin-report-data-value">5.10.2015</span>
+									</li>
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Номер уведомления</span>
+										<span class="vin-report-data-value">2015-000-953173-757</span>
+									</li>
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Имущество</span>
+										<span class="vin-report-data-value">VIN: NLAFD75308W072210</span>
+									</li>
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Залогодержатель</span>
+										<span class="vin-report-data-value">Иванов Иван Иванович (02.04.1992)</span>
+									</li>
+									<li class="vin-report-data">
+										<span class="vin-report-data-title">Залогодатель</span>
+										<span class="vin-report-data-value">Банк СОЮЗ (акционерное общество)</span>
+									</li>
+								</ul>
+								<div class="buttons-wrapper">
+									<a class="button print" href="#">Распечатать</a>
+									<a class="button pdf" href="#">Сохранить в PDF</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="modal2" class="modal-window-notification">
+					<div class="modal-window-content">
+						<div class="payment-notification">
+							<h3 class="modal-window-title">Оплата прошла успешно</h3>
+							<div class="modal-window-container">
+								<span class="modal-window-text">Ваш отчёт по VIN коду - Z8NBBUJ32BS024566 подготавливается.</span>
+								<span class="modal-window-text">Пожалуйста подождите, обычно это занимает не более 45 секунд.</span>
+							</div>
+						</div>
+						<div class="payment-status">
+							<div class="modal-window-container">
+								<div class="payment-status-icon">
+									<i class="icon icon-timer"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="modal3" class="modal-window-contact">
+					<div class="modal-window-content">
+						<div class="contact-form">
+							<h3 class="modal-window-title">Задайте вопрос</h3>
+							<div class="modal-window-container">
+								<span class="modal-window-text">С вами свяжутся в течении рабочего дня</span>
+								<form name="contact-form" method="POST">
+									<input name="name" class="text-input" placeholder="Введите ваше Имя*" type="text" required>
+									<input name="email" class="text-input" placeholder="Введите ваш E-Mail*" type="text" required>
+									<input name="phone" class="text-input" placeholder="Введите ваш Телефон*" type="text" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
+									<textarea name="message" class="text-input" rows="3" required></textarea>
+									<input class="button" value="Отправить" type="submit">
+								</form>
+								<span class="modal-window-text">Ваши данные не передаются третьим лицам</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-window-overlay"></div>
+		</div>
+
+		<header class="header">
+			<div class="container">
+				<a class="site-logo" href="index.html">
+					<img src="img/site_logo.png" alt="">
+				</a>
+				<h2 class="site-description">
+					Проверка истории<br>
+					автомобиля по <span>VIN</span> коду<br>
+					<span>по 29 пунктам</span>
+				</h2>
+				<nav class="site-nav">
+					<div class="menu-button">
+						<i class="icon icon-hamburger"></i>
+					</div>
+					<ul class="site-nav-menu">
+						<li class="site-nav-menu-item">
+							<a href="index.html#about">О нас</a>
+						</li>
+						<li class="site-nav-menu-item">
+							<a href="faq.html">Частые вопросы</a>
+						</li>
+						<li class="site-nav-menu-item active">
+							<a href="conditions.html">Условия сервиса</a>
+						</li>
+						<li class="site-nav-menu-item dropdown">
+							<a href="partnership.html">Партнёрство</a>
+							<ul class="dropdown-menu">
+								<li class="dropdown-menu-item">
+									<a href="partnership1.html">Ссылка 1</a>
+								</li>
+								<li class="dropdown-menu-item">
+									<a href="partnership2.html">Ссылка 2</a>
+								</li>
+								<li class="dropdown-menu-item">
+									<a href="partnership3.html">Ссылка 3</a>
+								</li>
+								<li class="dropdown-menu-item">
+									<a href="partnership4.html">Ссылка 4</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<section class="secondary-section">
+			<div class="container" style="text-align: left; color: #000; line-height: 1.5;">
+				<h1 class="section-title" style="text-align: center;">Условия сервиса</h1>
+				<style>
+				p {
+				    margin-bottom: 15px;
+					}
+				</style>
+	<div style="margin-top:-50px;"><p><span style="font-weight:700">1. ОБЩИЕ ПОЛОЖЕНИЯ</span></p>
+<p>1.1. Настоящий Соглашение является официальным предложением (публичной офертой) - (далее - Оферта) ООО "Джед Груп". (в дальнейшем &laquo;Оператор&raquo;) для дееспособного физического лица, и/или зарегистрированное в установленном порядке на территории Российской Федерации юридическое лицо и/или индивидуальный предприниматель (далее &ndash; &laquo;Пользователь&raquo;), которое примет настоящее предложение, на указанных ниже условиях.</p>
+<p>1.2. Настоящее Соглашение заключается между Пользователем и Оператором сервиса и является публичной офертой в соответствии со ст. 435 Гражданского Кодекса Российской Федерации. Действия Пользователя по отправке запроса на получение информации об Автомобиле с помощью специальной формы на Портале считаются акцептом оферты согласно ст. 438 Гражданского Кодекса Российской Федерации и означают безоговорочное принятие Пользователем всех условий данного Соглашения без каких-либо изъятий или ограничений на условиях присоединения (акцептом оферты)</p>
+<p>1.3. Моментом полного и безоговорочного принятия Пользователем предложения Оператора заключить Договор оферты (акцептом оферты) считается факт подтверждения готовности совершить оплату услуги Оператора, посредством нажатия кнопки &laquo;Оплатить&raquo; на сайте https://checkauto.cars-bazar.ru/. Текст настоящего Договора-оферты (далее по тексту &ndash; &laquo;Договор&raquo;) расположен по адресу: https://checkauto.cars-bazar.ru/.</p>
+<p>1.4. Осуществляя акцепт Договора в порядке, определенном п. 1.3 Договора, Пользователь подтверждает, что он ознакомлен, согласен, полностью и безоговорочно принимает все условия Договора в том виде, в каком они изложены в тексте настоящего Соглашения.</p>
+<p>1.5. Пользователь согласен, что акцепт Соглашения в порядке, указанном в п. 1.2 Договора является заключением Договора на условиях, изложенных в нем.</p>
+<p>1.6. Соглашение не может быть отозвано.</p>
+<p>1.7. Соглашение не требует скрепления печатями и/или подписания Пользователем и Оператором (далее по тексту - Стороны) и сохраняет при этом юридическую силу.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight:700">ТЕРМИНЫ И ОПРЕДЕЛЕНИЯ:</span></p>
+<p><span style="font-weight:700">Оператор</span> &ndash; ООО "Джед Груп"</p>
+<p><span style="font-weight:700">Пользователь</span> - дееспособное физическое лицо, и/или зарегистрированное в установленном порядке на территории Российской Федерации юридическое лицо и/или индивидуальный предприниматель, совершившее акцепт условий настоящей Оферты в порядке, предусмотренном настоящей Офертой;</p>
+<p><span style="font-weight:700">Портал</span> &ndash; портал checkauto.cars-bazar.ru сайт в компьютерной сети Оператора, который предоставляет зарегистрированным&nbsp;Пользователям, информацию по транспортным средствам, зарегистрированными и (или) эксплуатируемыми на территории Российской Федерации, различные интерактивные интернет-сервисы, которые работают в рамках этого сайта.</p>
+<p><span style="font-weight:700">Отчет &ndash;</span> результат Услуг, оказанных Оператором Пользователю, предусмотренных настоящим Соглашением, предоставляющий собой файл в электронной форме, предоставляемый Оператором Пользователю по окончании оказания Услуг.</p>
+<p><span style="font-weight:700">Услуги &ndash;</span> услуги, оказываемые Оператором Пользователю, включающий поиск, компоновку сведений о Транспортном средстве, данные о котором были введены Пользователем в специальном интерфейсе Портала.</p>
+<p><span style="font-weight:700">Транспортное средство</span> &ndash; транспортное средство, данные о котором вводятся Пользователем самостоятельно в специальном интерфейсе Портала с целью получения информации о таком транспортном средстве, содержащейся в Отчете.</p>
+<p><span style="font-weight:700">Персональные данные</span> - любая информация, относящаяся к прямо или косвенно определенному, или определяемому физическому лицу (субъекту персональных данных).</p>
+<p>&nbsp;</p>
+<p><span style="font-weight:700">2. Предмет Соглашения</span></p>
+<p>2.1. Предметом настоящего Соглашения является оказание Оператором Услуг в соответствии с условиями настоящего Соглашения.</p>
+<p>2.2. Каждый Пользователь, прибегающий к услугам оператора, обязуется соблюдать условия настоящего пользовательского соглашения.</p>
+<p>2.2. Пользователь полностью принимает условия Соглашения и оплачивает услуги Оператора в соответствии с условиями настоящего Соглашения.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight:700">3. Оплата Услуг</span></p>
+<p>3.1. Публичная оферта и тарифные планы являются официальными документами Оператора и публикуются на сайте checkauto.cars-bazar.ru.</p>
+<p>3.2. Стоимость услуг по Договору определяется в соответствии с действующими ценами и прописана на сайте checkauto.cars-bazar.ru.</p>
+<p>3.3 Способ оплаты Услуг производится Пользователем самостоятельно из способов, представленных на Портале.</p>
+<p>3.4. В соответствии с п. 1 ст. 317.1 Гражданского кодекса Российской Федерации Сторонами согласовано, что в отношении любых денежных обязательств Сторон по Соглашению, законные проценты (проценты на сумму долга за период пользования денежными средствами) не начисляются.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight:700">4. ПРАВА И ОБЯЗАННОСТИ СТОРОН</span></p>
+<p>4.1. Оператор обязан:</p>
+<p>4.1.1. Оказать Пользователю Услуги в соответствии с положениями заключенного Соглашения, при наличии технической возможности предоставления Услуги при условии оплаты Услуг Пользователем в порядке, предусмотренном настоящей Офертой</p>
+<p>4.2. &nbsp;Оператор имеет право:</p>
+<p>4.2.1. Вносить изменения в сервисы Портала, а также предоставлять доступ к новым сервисам с последующим уведомлением Пользователя.</p>
+<p>4.2.2. В любой момент времени изменить условия настоящего Соглашения с последующим уведомлением Пользователя.</p>
+<p>4.2.3. Проводить профилактические работы в отношении сервисов Портала с временным приостановлением их работы или работы Портала в целом.</p>
+<p>4.2.4. Оператор не несет ответственность за последствия несанкционированного использования сервисов Портала третьими лицами, осуществленного не по вине Оператора</p>
+<p>4.3. Пользователь обязан:</p>
+<p>4.3.1. Оплачивать Услуги по выбранным тарифным планам на Портале</p>
+<p>4.3.2. Нести полную ответственность за все действия, осуществленные на Портале</p>
+<p>4.3.3. Не использовать сервисы Портала для совершения каких-либо противоправных целей.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight:700">5. КОНФИДЕНЦИАЛЬНОСТЬ И ЗАЩИТА ПЕРСОНАЛЬНЫХ ДАННЫХ</span></p>
+<p>5.1. Персональные данные, предоставляемые Пользователем Порталу, защищаются, используются и обрабатываются в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ &laquo;О персональных данных&raquo;.</p>
+<p>5.2. Осуществляя регистрацию и авторизацию на Портале, Пользователь дает свое согласие на обработку своих персональных данных в связи с использованием сервисов Портала.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight:700">6. ОТВЕТСТВЕННОСТЬ СТОРОН</span></p>
+<p>6.1. Пользователь несет полную ответственность за правильность и своевременность производимой им оплаты за Услуги Оператора, достоверность регистрационных данных на сайте checkauto.cars-bazar.ru.</p>
+<p>6.2. Оператор не несет ответственности в случае утраты Пользователем доступа к Личному кабинету и/или Отчету (Отчетам), надлежащим образом предоставленным Оператором Пользователю.</p>
+<p>6.3. Пользователь подтверждает свое согласие с тем, что факт выполнения команды (клик, нажатие клавиши и т.п.) через интерфейс Портала означает действие Пользователя, подтверждающее заказ Услуг. При этом совершение указанных действий Пользователем, авторизованным под своим логином и паролем, является бесспорным подтверждением волеизъявления Пользователя в отношении заказа Услуг в соответствии со стоимостью Услуг.</p>
+<p>6.4. Оператор не несет ответственность за убытки Пользователя, а также не подлежит привлечению к иным мерам ответственности в связи с неисполнением или ненадлежащим исполнением настоящего Соглашения.</p>
+<p>6.5. В случае неисполнения или ненадлежащего исполнения Пользователем настоящего Соглашения Пользователь несет ответственность перед Оператором.</p>
+<p>6.6. Оператор не несет ответственности за любые задержки или неспособность обеспечить отчетами, если такая задержка или невыполнение вызывают события,&nbsp;находящиеся вне контроля Оператора, в том числе стихийные бедствия, терроризм, забастовки, пожары, землетрясения, наводнения, эпидемии, массовые беспорядки, а также сбои в работе источников, из которых Оператор получает информацию для формирования отчетов, и иные подобные события</p>
+<p>6.7. Оператор не несет ответственности за неточность, ошибки и неполноту информации, содержащейся в отчетах.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight:700">7. ПРОЧИЕ УСЛОВИЯ</span></p>
+<p>7.1. Настоящее Соглашение регулируется законодательством Российской Федерации</p>
+<p>7.2. Пользователь вправе отказаться от использования сервисов Портала, воспользовавшись возможностью удаления учетной записи Пользователя.</p>
+<p>7.3. Оператор вправе без предупреждения приостановить использование Пользователем сервисов Портала в случаях:</p>
+<p>7.3. 1. Нарушения Пользователем условий настоящего Соглашения.</p>
+<p>7.4. Все споры по настоящему Соглашению разрешаются в соответствии с нормами законодательства Российской Федерации.</p></div>
+</div>
+		</section>
+		<section class="check">
+			<div class="container">
+				<div class="check-form">
+					<h5 class="form-title">Проверить наличие данных по машине:</h5>
+					<form action="reports.php">
+						<span class="input-hint">Введите 17 знаков VIN:<sup>*</sup></span>
+						<span class="input-list-enum">1</span><input name="vin" class="text-input" placeholder="X7MDC14BM90004876" type="text" minlength="17" maxlength="17" pattern="[0-9A-Z]{17}" required><br />
+						<span class="input-hint">Введите Email для отправки отчета:<sup>*</sup></span>
+						<span class="input-list-enum">2</span><input name="email" class="text-input" placeholder="Введите email" type="email" required><br />
+						<input class="button search" value="Проверить" type="submit">
+					</form>
+					<div class="view-report">
+						<i class="icon icon-pdf"></i>
+						<a class="link open-modal" data-modal="#modal4" href="#">
+							Посмотреть пример полного отчета
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+			<footer class="footer">
+			<div class="container">
+				<div class="footer-left clearfix">
+					<a class="site-logo" href="index.html">
+						<img src="img/site_logo_dark.png" alt="">
+					</a>
+					<h2 class="site-description">
+						Проверка истории<br>
+						автомобиля по <span>VIN</span> коду
+					</h2>
+				</div>
+				<div class="footer-right">
+					<span>Контакты:</span>
+					<ul class="contact-info">
+						<li class="contact-info-item">
+							E-Mail:
+							<a class="link" href="mailto:info@checkauto.cars-bazar.ru">info@checkauto.cars-bazar.ru</a>
+						</li>
+						<li class="contact-info-item">
+							Телефон:
+							<span>8 (981) 104-44-72</span>
+						</li>
+						<li class="contact-info-item">
+							Или
+							<a class="link open-modal" data-modal="#modal3" href="#">напишите нам</a>
+						</li>
+						<li class="contact-info-item">
+							Техническая поддержка работает:
+							<span>Пн-Пт с 9 до 18 часов</span>
+						</li>
+					</ul>
+				</div>
+				<span class="copyright">
+					© 2015 - 2017
+					<a class="link" href="index.html">checkauto.cars-bazar.ru</a>
+				</span>
+			</div>
+		</footer>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="vendor/jquery.inputmask.bundle.min.js"></script>
+		<script src="js/main.js"></script>
+		<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter44533300 = new Ya.Metrika({
+                    id:44533300,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    trackHash:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/44533300" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+	</body>
+</html>
