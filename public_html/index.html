@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/fancybox/jquery.fancybox.css">
+		<link rel="stylesheet" href="css/fancybox/jquery.fancybox.theme.css">
+		<link rel="stylesheet" href="css/owl.carousel.min.css">
+		<link rel="stylesheet" href="css/owl.theme.default.css">
+		<link rel="stylesheet" href="css/main.css">
+		<title>VIN JedPad</title>
+	</head>
+	<body>
+		<div id="order-window" class="modal-window">
+			<div class="modal-window-header">
+				<h3 class="modal-window-headline">Заказать пакет</h3>
+			</div>
+			<div class="modal-window-content">
+				<form method="post">
+					<input name="topic" value="Заказ пакета" type="hidden">
+					<input class="text-input" placeholder="Имя" type="text" required>
+					<input class="text-input" placeholder="Телефон" type="text" required>					
+					<input class="text-input" placeholder="E-Mail" type="text" required>
+					<input class="button lg rounded" value="Отправить" type="submit">
+				</form>	
+			</div>				
+		</div>		
+		<header class="header">
+			<div class="container">
+				<a class="site-logo" href="#">
+					<img src="img/site_logo.png" alt="">
+				</a>
+				<nav class="site-nav pull-right">
+					<div class="site-nav-toggle" data-toggle="collapse" data-target="#site-nav" aria-expanded="false">
+						<span class="icon icon-hamburger"></span>
+					</div>
+					<ul id="site-nav" class="site-nav-menu collapse">
+						<li class="site-nav-menu-item">
+							<a href="#">О проекте</a>
+						</li>
+						<li class="site-nav-menu-item">
+							<a href="#">Как купить отчет</a>
+						</li>
+						<li class="site-nav-menu-item">
+							<a href="#">Клиентам</a>
+						</li>
+						<li class="site-nav-menu-item">
+							<a href="#">Партнерам</a>
+						</li>																		
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<section class="hero">
+			<div class="container">
+				<div class="row site-headline">
+					<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+						<h1 class="site-headline">
+							Узнайте всю правду об автомобиле по VIN-коду 
+						</h1>					
+					</div>
+				</div>
+				<div class="row check-form">
+					<form class="clearfix" action="">
+						<div class="col-lg-3 col-lg-offset-2 col-md-4 col-sm-6">
+							<input class="text-input" placeholder="VIN" type="text" required>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<input class="text-input" placeholder="E-Mail для отчета" type="text" required>
+						</div>	
+						<div class="col-lg-2 col-md-4 col-sm-12">
+							<input class="button" value="Проверить авто" type="submit">
+						</div>		
+					</form>	
+					<div class="col-lg-3 col-lg-offset-7 col-md-4 col-md-offset-8 full-report-link">
+						<a href="report_example.html">Посмотреть пример полного отчета</a>
+					</div>							
+				</div>
+				<ul class="check-categories">
+					<li class="check-category">
+						<span class="icon icon-fssp"></span>
+						<span class="check-category-title">ФССП</span>
+					</li>
+					<li class="check-category">
+						<span class="icon icon-gibdd"></span>
+						<span class="check-category-title">ГИБДД</span>
+					</li>
+					<li class="check-category">
+						<span class="icon icon-rosstat"></span>
+						<span class="check-category-title">РОССТАТ</span>
+					</li>
+					<li class="check-category">
+						<span class="icon icon-nbki"></span>
+						<span class="check-category-title">НБКИ</span>
+					</li>	
+					<li class="check-category">
+						<span class="icon icon-vas-rf"></span>
+						<span class="check-category-title">ВАС РФ</span>
+					</li>
+					<li class="check-category">
+						<span class="icon icon-fst"></span>
+						<span class="check-category-title">ФСТ</span>
+					</li>																									
+				</ul>
+			</div>
+		</section>
+		<section class="facts">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-headline">
+						<span class="icon icon-chart"></span>
+						Почему стоит обязательно проверить автомобили?
+					</h2>
+				</div>
+				<div class="section-content">
+					<div class="row fact-blocks-row">
+						<div class="col-lg-5 col-md-5 col-sm-6 fact-block-wrapper">
+							<div class="fact-block">
+								<div class="fact-block-content left">
+									<span class="fact-percent">73%</span>
+									<div class="fact-text">
+										<div class="fact-text-line">
+											<span>автомобилей</span>
+										</div>
+										<div class="fact-text-line">
+											<span>участвовали в ДТП</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-7 col-md-7 col-sm-6 fact-block-wrapper">
+							<div class="fact-block half">
+								<div class="fact-block-content right">
+									<span class="fact-percent">23%</span>
+									<div class="fact-text">
+										<div class="fact-text-line">
+											<span>скручивают</span>
+										</div>
+										<div class="fact-text-line">
+											<span>пробег</span>
+										</div>
+									</div>
+								</div>								
+							</div>
+							<div class="fact-block half">
+								<div class="fact-block-content left">
+									<span class="fact-percent">3%</span>
+									<div class="fact-text">
+										<div class="fact-text-line">
+											<span>автомобилей</span>
+										</div>
+										<div class="fact-text-line">
+											<span>работали в такси</span>
+										</div>
+									</div>
+								</div>								
+							</div>							
+						</div>
+					</div>
+					<div class="row fact-blocks-row">
+						<div class="col-lg-5 col-md-4 col-sm-4 fact-block-wrapper">
+							<div class="fact-block">
+								<div class="fact-block-content top">
+									<span class="fact-percent">46%</span>
+									<div class="fact-text">
+										<div class="fact-text-line">
+											<span>имели 3-4 владельца</span>
+										</div>
+										<div class="fact-text-line">
+											<span>при продаже</span>
+										</div>
+									</div>
+								</div>									
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 fact-block-wrapper">
+							<div class="fact-block">
+								<div class="fact-block-content down">
+									<div class="fact-text">
+										<div class="fact-text-line">
+											<span>имеют запрет на</span>
+										</div>
+										<div class="fact-text-line">
+											<span>регистрационные действия</span>
+										</div>
+									</div>								
+									<span class="fact-percent">27%</span>
+								</div>									
+							</div>						
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-4 fact-block-wrapper">
+							<div class="fact-block">
+								<div class="fact-block-content down">
+									<div class="fact-text">
+										<div class="fact-text-line">
+											<span>находятся в залоге</span>
+										</div>
+										<div class="fact-text-line">
+											<span>в банке</span>
+										</div>
+									</div>
+									<span class="fact-percent">17%</span>
+								</div>									
+							</div>						
+						</div>						
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="report-info">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-headline">
+						<span class="icon icon-doc-lg"></span>
+						Какая информация содержится в отчёте?
+					</h2>
+				</div>
+				<div class="section-content">
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 report-info-wrapper">
+							<div class="report-info-img">
+								<img src="img/report_info_img1.jpg" alt="">
+							</div>
+							<ul class="report-info-list">
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-cost"></span>
+									</div>
+									Рыночная стоимость машины
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-stand"></span>
+									</div>
+									Ограничения на регистрацию ТС
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-info"></span>
+									</div>
+									Сведения о страховке ОСАГО
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-officer"></span>
+									</div>
+									Таможенное прохождение по СНГ
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-wrench"></span>
+									</div>
+									Ремонтные работы
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 report-info-wrapper">
+							<div class="report-info-img">
+								<img src="img/report_info_img2.jpg" alt="">
+							</div>
+							<ul class="report-info-list">
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-car"></span>
+									</div>
+									Участие в ДТП
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-police-car"></span>
+									</div>
+									Проверка на угон
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-car-sale"></span>
+									</div>
+									Проверка на залог в банке
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-speedo"></span>
+									</div>
+									Пробег машины
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-car-key"></span>
+									</div>
+									Сведения о покупке в лизинг
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 report-info-wrapper">
+							<div class="report-info-img">
+								<img src="img/report_info_img3.jpg" alt="">
+							</div>
+							<ul class="report-info-list">
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-vin"></span>
+									</div>
+									Расшифровка VIN кода
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-vw"></span>
+									</div>
+									Марка, модель ТС
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-classic-car"></span>
+									</div>
+									Год выпуска и комплектация ТС
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-docs"></span>
+									</div>
+									Сведения о тех. характеристиках ТС
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-people"></span>
+									</div>
+									Количество владельцев ТС
+								</li>
+							</ul>
+						</div>												
+					</div>
+					<div class="banner">
+						<a class="banner-link" href="report_example.html">
+							Пример полного отчета
+							<span class="icon icon-zoom"></span>
+						</a>
+					</div>
+				</div>				
+			</div>
+		</section>
+		<section class="about">
+			<div class="container">
+				<div class="section-content">
+					<div class="row">
+						<div class="col-lg-6 col-md-6">
+							<div class="about-block yellow">
+								<h2 class="about-block-title">О сервисе VIN.JedPad.com</h2>
+								<p class="about-block-text">
+									Сервис VIN.JedPad.com позволяет покупателю подержанного автомобиля получить сведения об истории владения и эксплуатации интересующего транспортного средства и снизить вероятность мошенничества со стороны недобросовестного продавца.
+								</p>
+								<p class="about-block-text">
+									Воспользовавшись сервисом, вы сэкономите свое время, в разы снижаете риск, например, купить угнанный, битый, или кредитный автомобиль.
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6">
+							<div class="about-block blue">
+								<h2 class="about-block-title">Как это работает?</h2>
+								<p class="about-block-text">
+									Для того, чтобы получить отчет, введите vin номер и нажмите кнопку «ПРОВЕРИТЬ». После этого у Вас на экране появится краткий отчет. В содержимом отчета доступна информация о наличии сведений по данному автомобилю. Чтобы получить полную версию отчета онлайн и копию отчета на E-mail, необходимо ввести адрес электронной почты и нажать кнопку «Перейти к оплате». Стоимость полного отчета 319 ₽.
+								</p>
+							</div>
+						</div>	
+						<div class="col-lg-12 col-md-12">
+							<div class="about-block gray">
+								<h2 class="about-block-title">Проверка авто по vin коду</h2>
+								<p class="about-block-text">
+									Вин (vin) номер – идентификационный код, позволяющий определить не только изготовителя вашего железного коня, но и узнать массу технических характеристик, модель и еще много дополнительной информации. К тому же этот «порядковый» номер просто незаменим, если вы хотите приобрести авто, узнать какие ограничения на него были наложены, не находится ли имущество в залоге у банка. ВИН – определенная «страховка» от рисков. Сегодня с помощью нашего сервиса вы можете в режиме онлайн получить необходимую вам информацию.
+								</p>
+								<div id="spoiler" class="spoiler-content collapse">
+									<p class="about-block-text">
+										Вин (vin) номер – идентификационный код, позволяющий определить не только изготовителя вашего железного коня, но и узнать массу технических характеристик, модель и еще много дополнительной информации. К тому же этот «порядковый» номер просто незаменим, если вы хотите приобрести авто, узнать какие ограничения на него были наложены, не находится ли имущество в залоге у банка. ВИН – определенная «страховка» от рисков. Сегодня с помощью нашего сервиса вы можете в режиме онлайн получить необходимую вам информацию.
+									</p>
+								</div>
+								<div class="spoiler-button collapsed" data-toggle="collapse" data-target="#spoiler" aria-expanded="false">
+									<span class="icon icon-arrows-down"></span>
+								</div>								
+							</div>							
+						</div>					
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="offers">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-headline">
+						<span class="icon icon-package"></span>
+						Пакетные предложения
+					</h2>
+				</div>
+				<div class="section-content">
+					<div class="row">
+						<div class="offers-slider owl-carousel owl-theme">
+							<div class="col-lg-12">
+								<div class="offer">
+									<h3 class="offer-title">Пакет 1</h3>
+									<span class="offer-info">до 100 проверок в месяц</span>
+									<span class="offer-price">99 р. отчет</span>
+									<a class="button lg rounded modal-block" href="#order-window">Заказать</a>
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<div class="offer">
+									<h3 class="offer-title">Пакет 2</h3>
+									<span class="offer-info">от 100 до 300 проверок в месяц</span>
+									<span class="offer-price">85 р. отчет</span>
+									<a class="button lg rounded modal-block" href="#order-window">Заказать</a>
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<div class="offer">
+									<h3 class="offer-title">Пакет 3</h3>
+									<span class="offer-info">от 300 до 500 проверок в месяц</span>
+									<span class="offer-price">80 р. отчет</span>
+									<a class="button lg rounded modal-block" href="#order-window">Заказать</a>
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<div class="offer">
+									<h3 class="offer-title">Пакет 4</h3>
+									<span class="offer-info">от 500 до 1000 проверок в месяц</span>
+									<span class="offer-price">75 р. отчет</span>
+									<a class="button lg rounded modal-block" href="#order-window">Заказать</a>
+								</div>
+							</div>												
+						</div>												
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="features">
+			<div class="container">
+				<div class="section-content">
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-sm-3">
+							<div class="feature">
+								<div class="feature-icon">
+									<span class="icon icon-like"></span>
+								</div>
+								<span class="feature-text">Удобный личный кабинет</span>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-3">
+							<div class="feature">
+								<div class="feature-icon">
+									<span class="icon icon-api"></span>
+								</div>
+								<span class="feature-text">Работа по API</span>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-3">
+							<div class="feature">
+								<div class="feature-icon">
+									<span class="icon icon-sale"></span>
+								</div>
+								<span class="feature-text">Спец. условия при работе совместно с JedPad.com</span>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-3">
+							<div class="feature">
+								<div class="feature-icon">
+									<span class="icon icon-smartphone"></span>
+								</div>
+								<span class="feature-text">Мобильное приложение</span>
+							</div>
+						</div>																		
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="form">
+			<div class="container">
+				<div class="section-content">
+					<div class="row check-form">
+						<form class="clearfix" action="">
+							<div class="col-lg-3 col-lg-offset-2 col-md-4 col-sm-6">
+								<input class="text-input" placeholder="VIN" type="text" required>
+							</div>
+							<div class="col-lg-3 col-md-4 col-sm-6">
+								<input class="text-input" placeholder="E-Mail для отчета" type="text" required>
+							</div>	
+							<div class="col-lg-2 col-md-4 col-sm-12">
+								<input class="button" value="Проверить авто" type="submit">
+							</div>		
+						</form>	
+						<div class="col-lg-3 col-lg-offset-7 col-md-12 full-report-link">
+							<a href="report_example.html">Посмотреть пример полного отчета</a>
+						</div>							
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-4">
+						<a class="site-logo" href="#">
+							<img src="img/site_logo.png" alt="">
+						</a>
+					</div>
+					<div class="col-lg-3 col-lg-offset-4 col-md-3 col-md-offset-3 col-sm-4">
+						<span class="footer-info">
+							Техническая поддержка работает:<br>
+							Пн-Пт с 9 до 18 часов
+						</span>
+					</div>
+					<div class="col-lg-2 col-md-3 col-sm-4">
+						<span class="footer-info">
+							E-Mail: <a href="mailto:info@jedpad.com">info@jedpad.com</a><br>
+							Телефон: 8 (981) 104-44-72<br>
+							Или <a href="#">напишите нам</a>	
+						</span>					
+					</div>
+				</div>
+				<span class="copyright">© 2015 - 2017
+					<a href="#">vin.jedpad.com</a>
+				</span>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="vendor/jquery.fancybox.pack.js"></script>
+		<script src="vendor/owl.carousel.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
