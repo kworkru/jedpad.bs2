@@ -1,0 +1,9 @@
+/logs
+/store/*.jpg
+/store/*.png
+/store/*.html
+/store/*.htm
+/vendor
+cookie-jar
+/mail/phpmailer
+testbench.php
