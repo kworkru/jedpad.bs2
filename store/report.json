@@ -1,0 +1,117 @@
+{
+    "history": {
+        "RequestResult": {
+            "ownershipPeriods": {
+                "ownershipPeriod": [
+                    {
+                        "lastOperation": "11",
+                        "simplePersonType": "Legal",
+                        "from": "2008-04-30T00:00:00.000+04:00",
+                        "to": "2011-06-09T00:00:00.000+04:00"
+                    },
+                    {
+                        "lastOperation": "62",
+                        "simplePersonType": "Legal",
+                        "from": "2011-06-09T00:00:00.000+04:00",
+                        "to": "2011-06-09T00:00:00.000+04:00"
+                    },
+                    {
+                        "lastOperation": "62",
+                        "simplePersonType": "Natural",
+                        "from": "2011-06-24T00:00:00.000+04:00",
+                        "to": "2013-06-14T00:00:00.000+04:00"
+                    },
+                    {
+                        "lastOperation": "12",
+                        "simplePersonType": "Natural",
+                        "from": "2013-07-03T00:00:00.000+04:00"
+                    }
+                ]
+            },
+            "vehiclePassport": {
+                "number": "77ТХ315388",
+                "issue": "ТАМОЖНЯ: 10009140"
+            },
+            "vehicle": {
+                "engineVolume": "1997.0",
+                "color": "СЕРЫЙ",
+                "bodyNumber": "WF0RХХGСDR8R45807",
+                "year": "2008",
+                "engineNumber": "8R45807",
+                "vin": "WF0RХХGСDR8R45807",
+                "model": "ФОРД КУГА",
+                "category": "В",
+                "type": "21",
+                "powerHp": "136.00",
+                "powerKwt": "100.00"
+            }
+        },
+        "vin": "WF0RXXGCDR8R45807",
+        "regnum": null,
+        "message": "ver.3.1",
+        "status": 200
+    },
+    "dtp": {
+        "RequestResult": {
+            "errorDescription": "",
+            "statusCode": 1,
+            "Accidents": []
+        },
+        "vin": "WF0RXXGCDR8R45807",
+        "status": 200
+    },
+    "wanted": {
+        "RequestResult": {
+            "records": [],
+            "count": 0,
+            "error": 0
+        },
+        "vin": "WF0RXXGCDR8R45807",
+        "status": 200
+    },
+    "restrict": {
+        "RequestResult": {
+            "records": [],
+            "count": 0,
+            "error": 0
+        },
+        "vin": "WF0RXXGCDR8R45807",
+        "status": 200
+    },
+    "rca": {
+        "bodyNumber": "",
+        "chassisNumber": "",
+        "licensePlate": "",
+        "vin": "WF0RXXGCDR8R45807",
+        "policyUnqId": null,
+        "policyResponseUIItems": [
+            {
+                "insCompanyName": "РЕСО-Гарантия",
+                "policyBsoNumber": "0389162975",
+                "policyBsoSerial": "ЕЕЕ",
+                "policyIsRestrict": "1",
+                "policyUnqId": "254519858"
+            }
+        ],
+        "errorMessage": null,
+        "errorId": 0,
+        "warningMessage": null,
+        "validCaptcha": true
+    },
+    "zalog": [],
+    "vin": {
+        "brand": "FORD",
+        "factory": "ООО Форд Мотор Компани (RU)",
+        "owner": "FORD",
+        "country": "Россия",
+        "addon": "Производство из SKD комплектов (г. Всеволжск)"
+    },
+    "osago": {
+        "price": 9979.2
+    },
+    "carprice": null,
+    "status": "full",
+    "order": {
+        "id": "320"
+    }
+}

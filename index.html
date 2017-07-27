@@ -3,449 +3,225 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<meta name="description" content="Проверка истории автомобиля по VIN коду">
 		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/fancybox/jquery.fancybox.css">
+		<link rel="stylesheet" href="css/fancybox/jquery.fancybox.theme.css">
+		<link rel="stylesheet" href="css/owl.carousel.min.css">
+		<link rel="stylesheet" href="css/owl.theme.default.css">
 		<link rel="stylesheet" href="css/main.css">
 		<title>VIN JedPad</title>
 	</head>
 	<body>
-	<span id="top"></span>
-		<div class="modal-window">
-			<div class="modal-window-wrapper">
-				<div class="close-button">
-					<i class="icon icon-close"></i>
-				</div>
-				<div id="modal1" class="modal-window-full-report">
-					<div class="modal-window-content">
-						<div class="vin-full-report">
-							<h3 class="modal-window-title">Получен полный отчёт по VIN коду - Z8NBBUJ32BS024566</h3>
-							<div class="modal-window-container">
-								<div class="buttons-wrapper">
-									<a class="button print" href="#">Распечатать</a>
-									<a class="button pdf" href="#">Сохранить в PDF</a>
-								</div>
-								<h5 class="report-data-category">Общие сведения об автомобиле</h5>
-								<ul class="vin-report-list">
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">VIN</span>
-										<span class="vin-report-data-value">Z8NBBUJ32BS024566</span>
-									</li>
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Модель</span>
-										<span class="vin-report-data-value">Honda Civic</span>
-									</li>
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Год производства</span>
-										<span class="vin-report-data-value">2008</span>
-									</li>
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Объем двигателя</span>
-										<span class="vin-report-data-value">1799 куб. см.</span>
-									</li>
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Мощность двигателя</span>
-										<span class="vin-report-data-value">133 л.с. / 98 кВт</span>
-									</li>
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Цвет</span>
-										<span class="vin-report-data-value">Серый</span>
-									</li>
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Комплектация</span>
-										<span class="vin-report-data-value">Седан</span>
-									</li>
-								</ul>
-								<h5 class="report-data-category">Данные таможни</h5>
-								<ul class="vin-report-list">
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Дата декларации</span>
-										<span class="vin-report-data-value">2008/10/06</span>
-									</li>
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Страна вывоз</span>
-										<span class="vin-report-data-value">Турция</span>
-									</li>
-								</ul>
-								<h5 class="report-data-category">Данные ОСАГО</h5>
-								<ul class="vin-report-list">
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Дата запроса действительности полиса</span>
-										<span class="vin-report-data-value">2008/10/06</span>
-									</li>
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Серия договора</span>
-										<span class="vin-report-data-value">ЕЕЕ</span>
-									</li>
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Номер договора</span>
-										<span class="vin-report-data-value">0385473973</span>
-									</li>
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Ограничения лиц допущенных к управлению ТС</span>
-										<span class="vin-report-data-value">С ограничениями</span>
-									</li>
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Страховая компания</span>
-										<span class="vin-report-data-value">РЕСО-гарантия</span>
-									</li>
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Примерная стоимость ОСАГО на 1 год</span>
-										<span class="vin-report-data-value">
-											10570 рублей
-											<a class="button" href="http://cars-bazar.ru/uslugi/osago/" target="_blank">Купить ОСАГО</a>
-										</span>
-									</li>
-								</ul>
-								<h5 class="report-data-category">Пробег автомобиля</h5>
-								<ul class="vin-report-list">
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Значение</span>
-										<span class="vin-report-data-value">Данные не зафиксированы</span>
-									</li>
-								</ul>
-								<h5 class="report-data-category">Сведения об участии в ДТП</h5>
-								<ul class="vin-report-list">
-									<li class="vin-report-data">
-										<span class="vin-report-data-value single">Данные об участии в ДТП не найдены</span>
-									</li>
-									<li class="vin-report-data">
-										<span class="vin-report-data-hint">
-											Мы не смогли найти факты, которые указывают на наличие ДТП.<br>
-											Тем не менее, это не означает, что данный автомобиль НЕ УЧАСТВОВАЛ в ДТП
-										</span>
-									</li>
-								</ul>
-								<h5 class="report-data-category">Количество владельцев</h5>
-								<ul class="vin-report-list">
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Владельцев</span>
-										<span class="vin-report-data-value">4</span>
-									</li>
-								</ul>
-								<h5 class="report-data-category">История регистрационных действий</h5>
-								<ul class="vin-report-list">
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Дата последней операции</span>
-										<span class="vin-report-data-value">2008-11-11</span>
-									</li>
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Дата последней операции</span>
-										<span class="vin-report-data-value">2014-05-02</span>
-									</li>
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Дата последней операции</span>
-										<span class="vin-report-data-value">2015-10-08</span>
-									</li>
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Дата последней операции</span>
-										<span class="vin-report-data-value">2015-10-08</span>
-									</li>
-								</ul>
-								<h5 class="report-data-category">Информация о розыске ТС, в системе МВД России</h5>
-								<ul class="vin-report-list">
-									<li class="vin-report-data">
-										<span class="vin-report-data-value single">ГИБДД подтвердило, что автомобиль не числится в угоне</span>
-									</li>
-								</ul>
-								<h5 class="report-data-category">Информация о наложении ограничений в Госавтоинспекции на ТС</h5>
-								<ul class="vin-report-list">
-									<li class="vin-report-data">
-										<span class="vin-report-data-value single">Ограничений нет (проверено в ГИБДД)</span>
-									</li>
-								</ul>
-								<h5 class="report-data-category">Утилизация</h5>
-								<ul class="vin-report-list">
-									<li class="vin-report-data">
-										<span class="vin-report-data-value single">Автомобиль не был утилизирован (Проверено в ГИБДД)</span>
-									</li>
-								</ul>
-								<h5 class="report-data-category">Использование автомобиля в качестве такси</h5>
-								<ul class="vin-report-list">
-									<li class="vin-report-data">
-										<span class="vin-report-data-value single">На автомобиль не выдавалась лицензия на такси</span>
-									</li>
-								</ul>
-								<h5 class="report-data-category">Информация о нахождении в залоге у банков</h5>
-								<ul class="vin-report-list">
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Дата регистрации</span>
-										<span class="vin-report-data-value">5.10.2015</span>
-									</li>
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Номер уведомления</span>
-										<span class="vin-report-data-value">2015-000-953173-757</span>
-									</li>
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Имущество</span>
-										<span class="vin-report-data-value">VIN: NLAFD75308W072210</span>
-									</li>
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Залогодержатель</span>
-										<span class="vin-report-data-value">Иванов Иван Иванович (02.04.1992)</span>
-									</li>
-									<li class="vin-report-data">
-										<span class="vin-report-data-title">Залогодатель</span>
-										<span class="vin-report-data-value">Банк СОЮЗ (акционерное общество)</span>
-									</li>
-								</ul>
-								<div class="buttons-wrapper">
-									<a class="button print" href="#">Распечатать</a>
-									<a class="button pdf" href="#">Сохранить в PDF</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div id="modal2" class="modal-window-notification">
-					<div class="modal-window-content">
-						<div class="payment-notification">
-							<h3 class="modal-window-title">Оплата прошла успешно</h3>
-							<div class="modal-window-container">
-								<span class="modal-window-text">Ваш отчёт по VIN коду - Z8NBBUJ32BS024566 подготавливается.</span>
-								<span class="modal-window-text">Пожалуйста подождите, обычно это не занимает более 45 секунд.</span>
-							</div>
-						</div>
-						<div class="payment-status">
-							<div class="modal-window-container">
-								<div class="payment-status-icon">
-									<i class="icon icon-timer"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div id="modal3" class="modal-window-contact">
-					<div class="modal-window-content">
-						<div class="contact-form">
-							<h3 class="modal-window-title">Задайте вопрос</h3>
-							<div class="modal-window-container">
-								<span class="modal-window-text">С вами свяжутся в течении рабочего дня</span>
-								<form name="contact-form" method="POST">
-									<input name="name" class="text-input" placeholder="Введите ваше Имя*" type="text" required>
-									<input name="email" class="text-input" placeholder="Введите ваш E-Mail*" type="text" required>
-									<input name="phone" class="text-input" placeholder="Введите ваш Телефон*" type="text" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
-									<textarea name="message" class="text-input" rows="3" required></textarea>
-									<input class="button" value="Отправить" type="submit">
-								</form>
-								<span class="modal-window-text">Ваши данные не передаются третьим лицам</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div id="modal4" class="modal-window-full-report">
-					<div class="modal-window-content">
-						<div class="water-marks">
-							<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
-							<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
-							<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
-							<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
-							<span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span><span>checkauto.cars-bazar.ru</span>
-						</div>
-						<div class="vin-full-report">
-							<h3 class="modal-window-title">Пример полного отчёта по VIN коду - КNАDН511ВА6672755</h3>
-							<div class="modal-window-container">
-								<div class="buttons-wrapper">
-									<a class="button print" href="#">Посмотреть версию для печати</a>
-									<a class="button pdf" href="/store/КNАDН511ВА6672755.pdf">Посметреть PDF версию отчета</a>
-								</div>
-								<div class="vin-full-report-container"><h5 class="report-data-category">Общие сведения об автомобиле</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-title">Модель</span><span class="vin-report-data-value vehicle-model">КИАРИО</span></li><li class="vin-report-data"><span class="vin-report-data-title">VIN</span><span class="vin-report-data-value vehicle-vin">КNАDН511ВА6672755</span></li><li class="vin-report-data"><span class="vin-report-data-title">Год производства</span><span class="vin-report-data-value vehicle-year">2010</span></li><li class="vin-report-data"><span class="vin-report-data-title">Цвет</span><span class="vin-report-data-value vehicle-color">СИНИЙ</span></li><li class="vin-report-data"><span class="vin-report-data-title">Мощность двигателя</span><span class="vin-report-data-value vehicle-powerHp">97 л.с.</span></li><li class="vin-report-data"><span class="vin-report-data-title">Объём двигателя</span><span class="vin-report-data-value vehicle-engineVolume">1399 куб. см.</span></li><li class="vin-report-data"><span class="vin-report-data-title">Тип</span><span class="vin-report-data-value vehicle-category">Легковые автомобили, небольшие грузовики (до 3,5 тонн)</span></li></ul><h5 class="report-data-category">Данные таможни</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-title">Дата декларации</span><span class="vin-report-data-value customs-date">2010</span></li><li class="vin-report-data"><span class="vin-report-data-title">Страна вывоз</span><span class="vin-report-data-value customs-country">Южная Корея</span></li></ul><h5 class="report-data-category">Данные ОСАГО</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-title">Дата запроса действительности полиса</span><span class="vin-report-data-value osago-date">2017/05/14</span></li><li class="vin-report-data"><span class="vin-report-data-title">Серия договора</span><span class="vin-report-data-value osago-policyBsoSerial">ЕЕЕ</span></li><li class="vin-report-data"><span class="vin-report-data-title">Номер договора</span><span class="vin-report-data-value osago-policyBsoNumber">0903950818</span></li><li class="vin-report-data"><span class="vin-report-data-title">Ограничения лиц допущенных к управлению ТС</span><span class="vin-report-data-value osago-policyIsRestrict">Без ограничений</span></li><li class="vin-report-data"><span class="vin-report-data-title">Страховая компания</span><span class="vin-report-data-value osago-insCompanyName">РЕСО-Гарантия</span></li></ul><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-title">Примерная стоимость ОСАГО на 1 год</span><span class="vin-report-data-value osago-price">7840.80<a class="button" href="http://cars-bazar.ru/uslugi/osago/" target="_blank">Купить ОСАГО</a></span></li></ul><h5 class="report-data-category" style="background-color:#19b689;">Рыночная стоимость</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-title">Примерная стоимость</span><span class="vin-report-data-value data-value">от 690 536 руб. до 986 480 руб.</span></li></ul><h5 class="report-data-category">Пробег автомобиля</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-title">Значение</span><span class="vin-report-data-value data-value">Данные не зафиксированы</span></li></ul><h5 class="report-data-category">Сведения об участии в ДТП</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-value single">Данные не зафиксированы</span><span class="vin-report-data-hint">Мы не смогли найти факты, которые указывают на наличие ДТП.<br>Тем не менее, это не означает, что данный автомобиль НЕ УЧАСТВОВАЛ в ДТП</span></li></ul><h5 class="report-data-category">Количество владельцев</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-title">Владельцев</span><span class="vin-report-data-value data-value">1</span></li></ul><h5 class="report-data-category">История регистрационных действий</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-title">Дата последней операции</span><span class="vin-report-data-value data-value">По текущий момент</span></li></ul><h5 class="report-data-category">Информация о розыске ТС, в системе МВД России</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-value single">ГИБДД подтвердило, что автомобиль не числится в угоне</span></li></ul><h5 class="report-data-category">Информация о наложении ограничений в Госавтоинспекции на ТС</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-value single">Информация об ограничении 54#SP1133075</span></li><li class="vin-report-data"><span class="vin-report-data-title">Марка (модель) ТС</span><span class="vin-report-data-value data-value">КИА РИО</span></li><li class="vin-report-data"><span class="vin-report-data-title">Год выпуска ТС</span><span class="vin-report-data-value data-value">2010&nbsp;г.</span></li><li class="vin-report-data"><span class="vin-report-data-title">Дата наложения ограничения</span><span class="vin-report-data-value data-value">14.03.2017</span></li><li class="vin-report-data"><span class="vin-report-data-title">Регион инициатора ограничения</span><span class="vin-report-data-value data-value">Новосибирская область</span></li><li class="vin-report-data"><span class="vin-report-data-title">Кем наложено ограничение</span><span class="vin-report-data-value data-value">Судебный пристав</span></li><li class="vin-report-data"><span class="vin-report-data-title">Вид ограничения</span><span class="vin-report-data-value data-value">Запрет на регистрационные действия</span></li><li class="vin-report-data"><span class="vin-report-data-title">Основания ограничения</span><span class="vin-report-data-value data-value">Документ: 102775493/5443 от 14.03.2017, Зульфалиева Юлия Игоревна, СПИ: 50431010626517, ИП:[Номер ИП скрыт] от 11.01.2017</span></li></ul><h5 class="report-data-category">Утилизация</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-value single">Автомобиль не был утилизирован (Проверено в ГИБДД)</span></li></ul><h5 class="report-data-category">Использование автомобиля в качестве такси</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-value single">На автомобиль не выдавалась лицензия на такси</span></li></ul><h5 class="report-data-category">Информация о нахождении в залоге у банков</h5><ul class="vin-report-list"><li class="vin-report-data"><span class="vin-report-data-value single">Данный автомобиль не числится в залоге</span></li></ul></div>
-								<div class="buttons-wrapper">
-									<a class="button print" href="#">Посмотреть версию для печати</a>
-									<a class="button pdf" href="/store/КNАDН511ВА6672755.pdf">Посметреть PDF версию отчета</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+		<div id="order-window" class="modal-window">
+			<div class="modal-window-header">
+				<h3 class="modal-window-headline">Заказать пакет</h3>
 			</div>
-			<div class="modal-window-overlay"></div>
+			<div class="modal-window-content">
+				<form method="post">
+					<input name="topic" value="Заказ пакета" type="hidden">
+					<input class="text-input" placeholder="Имя" type="text" required>
+					<input class="text-input" placeholder="Телефон" type="text" required>
+					<input class="text-input" placeholder="E-Mail" type="text" required>
+					<input class="button lg rounded" value="Отправить" type="submit">
+				</form>
+			</div>
 		</div>
-
 		<header class="header">
 			<div class="container">
-				<a class="site-logo" href="index.html">
+				<a class="site-logo" href="/">
 					<img src="img/site_logo.png" alt="">
 				</a>
-				<h2 class="site-description">
-					Проверка истории<br>
-					автомобиля по <span>VIN</span> коду<br>
-					<span>по 29 пунктам</span>
-				</h2>
-				<nav class="site-nav">
-					<div class="menu-button">
-						<i class="icon icon-hamburger"></i>
+				<nav class="site-nav pull-right">
+					<div class="site-nav-toggle" data-toggle="collapse" data-target="#site-nav" aria-expanded="false">
+						<span class="icon icon-hamburger"></span>
 					</div>
-					<ul class="site-nav-menu">
+					<ul id="site-nav" class="site-nav-menu collapse">
 						<li class="site-nav-menu-item">
-							<a href="#about">О нас</a>
+							<a href="#">О проекте</a>
 						</li>
 						<li class="site-nav-menu-item">
-							<a href="faq.html">Частые вопросы</a>
+							<a href="#">Как купить отчет</a>
 						</li>
 						<li class="site-nav-menu-item">
-							<a href="conditions.html">Условия сервиса</a>
+							<a href="#">Клиентам</a>
 						</li>
-						<li class="site-nav-menu-item dropdown">
-							<a href="partnership.html">Партнёрство</a>
-							<ul class="dropdown-menu">
-								<li class="dropdown-menu-item">
-									<a href="partnership1.html">Ссылка 1</a>
-								</li>
-								<li class="dropdown-menu-item">
-									<a href="partnership2.html">Ссылка 2</a>
-								</li>
-								<li class="dropdown-menu-item">
-									<a href="partnership3.html">Ссылка 3</a>
-								</li>
-								<li class="dropdown-menu-item">
-									<a href="partnership4.html">Ссылка 4</a>
-								</li>
-							</ul>
+						<li class="site-nav-menu-item">
+							<a href="#">Партнерам</a>
 						</li>
 					</ul>
 				</nav>
 			</div>
 		</header>
-		<section class="main">
+		<section class="hero">
+			<style>
+				.fullscreen-bg__video{
+					overflow: hidden;
+					/*width:1280px;
+					height:720px;*/
+					width:100%;
+					/*z-index: -100;*/
+					filter: blur(10px);
+					position: absolute;
+					left: 0;
+					top:0;
+				}
+			</style>
+			<video loop muted autoplay poster="video/plane.jpg" class="fullscreen-bg__video">
+			   <source src="media/lowquality.mp4" type="video/mp4">
+			   <!-- <source src="video/plane.webm" type="video/webm"> -->
+		   </video>
 			<div class="container">
-				<div class="check-form">
-					<h5 class="form-title">Проверить наличие данных по машине:</h5>
 
-					<form action="reports.php">
-						<span class="input-hint">Введите 17 знаков VIN:<sup>*</sup></span>
-						<span class="input-list-enum">1</span><input name="vin" class="text-input" placeholder="X7MDC14BM90004876" type="text" minlength="17" maxlength="17" pattern="[0-9A-Z]{17}" required><br />
-						<span class="input-hint">Введите Email для отправки отчета:<sup>*</sup></span>
-						<span class="input-list-enum">2</span><input name="email" class="text-input" placeholder="Введите email" type="email" required><br />
-						<input class="button search" value="Проверить" type="submit">
-					</form>
-					<div class="view-report">
-						<i class="icon icon-pdf"></i>
-						<a class="link open-modal" data-modal="#modal4" href="#">
-						<!-- <a class="link" href="/reports.php?vin=KNADH511BA6672755&type=full&example=true"> -->
-							Посмотреть пример полного отчета
-						</a>
+				<div class="row site-headline">
+					<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+						<h1 class="site-headline">
+							Узнайте всю правду об автомобиле по VIN-коду
+						</h1>
 					</div>
-					<ul class="check-categories">
-						<li class="check-category">
-							<i class="icon icon-gibdd"></i>
-							<h6 class="check-category-title">ГИБДД</h6>
-						</li>
-						<li class="check-category">
-							<i class="icon icon-rsa"></i>
-							<h6 class="check-category-title">РСА</h6>
-						</li>
-						<li class="check-category">
-							<i class="icon icon-fnp"></i>
-							<h6 class="check-category-title">ФНП</h6>
-						</li>
-						<li class="check-category">
-							<i class="icon icon-fts"></i>
-							<h6 class="check-category-title">ФТС</h6>
-						</li>
-					</ul>
 				</div>
+				<div class="row check-form">
+					<form class="clearfix" action="reports.php">
+						<div class="col-lg-3 col-lg-offset-2 col-md-4 col-sm-6">
+							<input class="text-input" placeholder="VIN" type="text" required name="vin">
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6">
+							<input class="text-input" placeholder="E-Mail для отчета" type="text" required  name="email">
+						</div>
+						<div class="col-lg-2 col-md-4 col-sm-12">
+							<input class="button" value="Проверить авто" type="submit">
+						</div>
+					</form>
+					<div class="col-lg-3 col-lg-offset-7 col-md-4 col-md-offset-8 full-report-link">
+						<a href="report_example.html">Посмотреть пример полного отчета</a>
+					</div>
+				</div>
+				<ul class="check-categories">
+					<li class="check-category">
+						<span class="icon icon-fssp"></span>
+						<span class="check-category-title">ФССП</span>
+					</li>
+					<li class="check-category">
+						<span class="icon icon-gibdd"></span>
+						<span class="check-category-title">ГИБДД</span>
+					</li>
+					<li class="check-category">
+						<span class="icon icon-rosstat"></span>
+						<span class="check-category-title">РОССТАТ</span>
+					</li>
+					<li class="check-category">
+						<span class="icon icon-nbki"></span>
+						<span class="check-category-title">НБКИ</span>
+					</li>
+					<li class="check-category">
+						<span class="icon icon-vas-rf"></span>
+						<span class="check-category-title">ВАС РФ</span>
+					</li>
+					<li class="check-category">
+						<span class="icon icon-fst"></span>
+						<span class="check-category-title">ФСТ</span>
+					</li>
+				</ul>
 			</div>
 		</section>
 		<section class="facts">
 			<div class="container">
-				<h2 class="section-title">Знаете ли вы что?</h2>
-				<div class="facts-list left">
-					<div class="fact clearfix">
-						<div class="fact-info">
-							<div class="fact-percent">87%</div>
-							<span class="fact-text">автомобилей попадают в аварии</span>
-						</div>
-						<div class="fact-icon">
-							<i class="icon icon-crash"></i>
-						</div>
-						<div class="fact-description">
-							<i class="icon icon-info"></i>
-							<div class="fact-tooltip">
-								<h3>Знаете ли Вы что...</h3>
-								<p>87% автомобилей попадают в аварии, при этом около половины автомобилей не подлежат ремонту. Не смотря на такую ситуацию в продаже более 60% автомобилей обозначены как безаварийные</p>
-							</div>
-						</div>
-					</div>
-					<div class="fact left clearfix">
-						<div class="fact-info">
-							<div class="fact-percent">65%</div>
-							<span class="fact-text">владельцев автомобилей скручивают пробег</span>
-						</div>
-						<div class="fact-icon">
-							<i class="icon icon-speed"></i>
-						</div>
-						<div class="fact-description">
-							<i class="icon icon-info"></i>
-							<div class="fact-tooltip">
-								<h3>Знаете ли Вы что...</h3>
-								<p>87% автомобилей попадают в аварии, при этом около половины автомобилей не подлегают ремонту. Не смотря на такую ситуацию в продаже более 60% автомобилей обозначены как безаварийные</p>
-							</div>
-						</div>
-					</div>
-					<div class="fact left clearfix">
-						<div class="fact-info">
-							<div class="fact-percent">40%</div>
-							<span class="fact-text">имели 3 - 4 владельца при продаже авто</span>
-						</div>
-						<div class="fact-icon">
-							<i class="icon icon-people"></i>
-						</div>
-						<div class="fact-description">
-							<i class="icon icon-info"></i>
-							<div class="fact-tooltip">
-								<h3>Знаете ли Вы что...</h3>
-								<p>87% автомобилей попадают в аварии, при этом около половины автомобилей не подлегают ремонту. Не смотря на такую ситуацию в продаже более 60% автомобилей обозначены как безаварийные</p>
-							</div>
-						</div>
-					</div>
+				<div class="section-header">
+					<h2 class="section-headline">
+						<span class="icon icon-chart"></span>
+						Почему стоит обязательно проверить автомобили?
+					</h2>
 				</div>
-				<div class="facts-list right">
-					<div class="fact clearfix">
-						<div class="fact-info">
-							<div class="fact-percent">24.5%</div>
-							<span class="fact-text">находятся в залоге в банке</span>
+				<div class="section-content">
+					<div class="row fact-blocks-row">
+						<div class="col-lg-5 col-md-5 col-sm-6 fact-block-wrapper">
+							<div class="fact-block">
+								<div class="fact-block-content left">
+									<span class="fact-percent">73%</span>
+									<div class="fact-text">
+										<div class="fact-text-line">
+											<span>автомобилей</span>
+										</div>
+										<div class="fact-text-line">
+											<span>участвовали в ДТП</span>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="fact-icon">
-							<i class="icon icon-bank"></i>
-						</div>
-						<div class="fact-description">
-							<i class="icon icon-info"></i>
-							<div class="fact-tooltip">
-								<h3>Знаете ли Вы что...</h3>
-								<p>87% автомобилей попадают в аварии, при этом около половины автомобилей не подлегают ремонту. Не смотря на такую ситуацию в продаже более 60% автомобилей обозначены как безаварийные</p>
+						<div class="col-lg-7 col-md-7 col-sm-6 fact-block-wrapper">
+							<div class="fact-block half">
+								<div class="fact-block-content right">
+									<span class="fact-percent">23%</span>
+									<div class="fact-text">
+										<div class="fact-text-line">
+											<span>скручивают</span>
+										</div>
+										<div class="fact-text-line">
+											<span>пробег</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="fact-block half">
+								<div class="fact-block-content left">
+									<span class="fact-percent">3%</span>
+									<div class="fact-text">
+										<div class="fact-text-line">
+											<span>автомобилей</span>
+										</div>
+										<div class="fact-text-line">
+											<span>работали в такси</span>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="fact left clearfix">
-						<div class="fact-info">
-							<div class="fact-percent">2.7%</div>
-							<span class="fact-text">использовались в качестве такси</span>
-						</div>
-						<div class="fact-icon">
-							<i class="icon icon-taxi"></i>
-						</div>
-						<div class="fact-description">
-							<i class="icon icon-info"></i>
-							<div class="fact-tooltip">
-								<h3>Знаете ли Вы что...</h3>
-								<p>87% автомобилей попадают в аварии, при этом около половины автомобилей не подлегают ремонту. Не смотря на такую ситуацию в продаже более 60% автомобилей обозначены как безаварийные</p>
+					<div class="row fact-blocks-row">
+						<div class="col-lg-5 col-md-4 col-sm-4 fact-block-wrapper">
+							<div class="fact-block">
+								<div class="fact-block-content top">
+									<span class="fact-percent">46%</span>
+									<div class="fact-text">
+										<div class="fact-text-line">
+											<span>имели 3-4 владельца</span>
+										</div>
+										<div class="fact-text-line">
+											<span>при продаже</span>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="fact left clearfix">
-						<div class="fact-info">
-							<div class="fact-percent">17%</div>
-							<span class="fact-text">имеют запрет на регистрационные действия</span>
+						<div class="col-lg-4 col-md-4 col-sm-4 fact-block-wrapper">
+							<div class="fact-block">
+								<div class="fact-block-content down">
+									<div class="fact-text">
+										<div class="fact-text-line">
+											<span>имеют запрет на</span>
+										</div>
+										<div class="fact-text-line">
+											<span>регистрационные действия</span>
+										</div>
+									</div>
+									<span class="fact-percent">27%</span>
+								</div>
+							</div>
 						</div>
-						<div class="fact-icon">
-							<i class="icon icon-interdict"></i>
-						</div>
-						<div class="fact-description">
-							<i class="icon icon-info"></i>
-							<div class="fact-tooltip">
-								<h3>Знаете ли Вы что...</h3>
-								<p>87% автомобилей попадают в аварии, при этом около половины автомобилей не подлегают ремонту. Не смотря на такую ситуацию в продаже более 60% автомобилей обозначены как безаварийные</p>
+						<div class="col-lg-3 col-md-4 col-sm-4 fact-block-wrapper">
+							<div class="fact-block">
+								<div class="fact-block-content down">
+									<div class="fact-text">
+										<div class="fact-text-line">
+											<span>находятся в залоге</span>
+										</div>
+										<div class="fact-text-line">
+											<span>в банке</span>
+										</div>
+									</div>
+									<span class="fact-percent">17%</span>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -454,407 +230,319 @@
 		</section>
 		<section class="report-info">
 			<div class="container">
-				<h2 class="section-title">Какая информация содержится в отчёте?</h2>
-				<ul class="report-info-list">
-					<li class="report-info-list-item">
-						<span>Расшифровка VIN кода</span>
-					</li>
-					<li class="report-info-list-item">
-						<span>Марка, модель ТС</span>
-					</li>
-					<li class="report-info-list-item">
-						<span>Год выпуска и комплектация ТС</span>
-					</li>
-					<li class="report-info-list-item">
-						<span>Сведения о технических характеристиках ТС</span>
-					</li>
-					<li class="report-info-list-item">
-						<span>Количество владельцев ТС</span>
-					</li>
-				</ul>
-				<ul class="report-info-list">
-					<li class="report-info-list-item">
-						<span>Участие в ДТП</span>
-					</li>
-					<li class="report-info-list-item">
-						<span>Проверка на угон</span>
-					</li>
-					<li class="report-info-list-item">
-						<span>Проверка на залог в банке</span>
-					</li>
-					<li class="report-info-list-item">
-						<span>Пробег машины</span>
-					</li>
-					<li class="report-info-list-item">
-						<span>Сведения о покупке в лизинг</span>
-					</li>
-				</ul>
-				<ul class="report-info-list">
-					<li class="report-info-list-item">
-						<span>Рыночная стоимость машины</span>
-					</li>
-					<li class="report-info-list-item">
-						<span>Ограничения на регистрацию ТС</span>
-					</li>
-					<li class="report-info-list-item">
-						<span>Сведения о страховке ОСАГО</span>
-					</li>
-					<li class="report-info-list-item">
-						<span>Таможенное прохождение по СНГ</span>
-					</li>
-					<li class="report-info-list-item">
-						<span>Ремонтные работы</span>
-					</li>
-				</ul>
-			</div>
-			<a href="#top"><div class="button search" style="position: absolute; margin-left: -90px; margin-top: 30px"><div style="padding:4px;">ПРОВЕРИТЬ VIN</div></div></a>
-			<div style="height:50px;"></div>
-		</section>
-		<section class="recent-numbers">
-			<div class="container">
-				<h2 class="section-title">Недавно проверенные VIN номера</h2>
-				<ul class="recent-numbers-list">
-					<li class="recent-number">
-						<div class="check-info">
-							<span class="check-time">14:31</span>
-							<span class="check-category">проверен автомобиль</span>
-						</div>
-						<div class="check-number">
-							<div class="check-icon">
-								<i class="icon icon-car"></i>
+				<div class="section-header">
+					<h2 class="section-headline">
+						<span class="icon icon-doc-lg"></span>
+						Какая информация содержится в отчёте?
+					</h2>
+				</div>
+				<div class="section-content">
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 report-info-wrapper">
+							<div class="report-info-img">
+								<img src="img/report_info_img1.jpg" alt="">
 							</div>
-							<a class="link" href="#">WAUZZZ4BZYN115003</a>
+							<ul class="report-info-list">
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-cost"></span>
+									</div>
+									Рыночная стоимость машины
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-stand"></span>
+									</div>
+									Ограничения на регистрацию ТС
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-info"></span>
+									</div>
+									Сведения о страховке ОСАГО
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-officer"></span>
+									</div>
+									Таможенное прохождение по СНГ
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-wrench"></span>
+									</div>
+									Ремонтные работы
+								</li>
+							</ul>
 						</div>
-					</li>
-					<li class="recent-number">
-						<div class="check-info">
-							<span class="check-time">14:31</span>
-							<span class="check-category">проверен автомобиль</span>
-						</div>
-						<div class="check-number">
-							<div class="check-icon">
-								<i class="icon icon-car"></i>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 report-info-wrapper">
+							<div class="report-info-img">
+								<img src="img/report_info_img2.jpg" alt="">
 							</div>
-							<a class="link" href="#">WAUZZZ4BZYN115003</a>
+							<ul class="report-info-list">
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-car"></span>
+									</div>
+									Участие в ДТП
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-police-car"></span>
+									</div>
+									Проверка на угон
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-car-sale"></span>
+									</div>
+									Проверка на залог в банке
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-speedo"></span>
+									</div>
+									Пробег машины
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-car-key"></span>
+									</div>
+									Сведения о покупке в лизинг
+								</li>
+							</ul>
 						</div>
-					</li>
-					<li class="recent-number">
-						<div class="check-info">
-							<span class="check-time">14:31</span>
-							<span class="check-category purchased">куплен полный отчёт для</span>
-						</div>
-						<div class="check-number">
-							<div class="check-icon">
-								<i class="icon icon-car"></i>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 report-info-wrapper">
+							<div class="report-info-img">
+								<img src="img/report_info_img3.jpg" alt="">
 							</div>
-							<a class="link" href="#">WAUZZZ4BZYN115003</a>
+							<ul class="report-info-list">
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-vin"></span>
+									</div>
+									Расшифровка VIN кода
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-vw"></span>
+									</div>
+									Марка, модель ТС
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-classic-car"></span>
+									</div>
+									Год выпуска и комплектация ТС
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-docs"></span>
+									</div>
+									Сведения о тех. характеристиках ТС
+								</li>
+								<li class="report-info-item">
+									<div class="report-info-icon">
+										<span class="icon icon-people"></span>
+									</div>
+									Количество владельцев ТС
+								</li>
+							</ul>
 						</div>
-					</li>
-					<li class="recent-number">
-						<div class="check-info">
-							<span class="check-time">14:31</span>
-							<span class="check-category">проверен автомобиль</span>
-						</div>
-						<div class="check-number">
-							<div class="check-icon">
-								<i class="icon icon-car"></i>
-							</div>
-							<a class="link" href="#">WAUZZZ4BZYN115003</a>
-						</div>
-					</li>
-					<li class="recent-number">
-						<div class="check-info">
-							<span class="check-time">14:31</span>
-							<span class="check-category">проверен автомобиль</span>
-						</div>
-						<div class="check-number">
-							<div class="check-icon">
-								<i class="icon icon-car"></i>
-							</div>
-							<a class="link" href="#">WAUZZZ4BZYN115003</a>
-						</div>
-					</li>
-					<li class="recent-number">
-						<div class="check-info">
-							<span class="check-time">14:31</span>
-							<span class="check-category purchased">куплен полный отчёт для</span>
-						</div>
-						<div class="check-number">
-							<div class="check-icon">
-								<i class="icon icon-car"></i>
-							</div>
-							<a class="link" href="#">WAUZZZ4BZYN115003</a>
-						</div>
-					</li>
-					<li class="recent-number">
-						<div class="check-info">
-							<span class="check-time">14:31</span>
-							<span class="check-category">проверен автомобиль</span>
-						</div>
-						<div class="check-number">
-							<div class="check-icon">
-								<i class="icon icon-car"></i>
-							</div>
-							<a class="link" href="#">WAUZZZ4BZYN115003</a>
-						</div>
-					</li>
-					<li class="recent-number">
-						<div class="check-info">
-							<span class="check-time">14:31</span>
-							<span class="check-category">проверен автомобиль</span>
-						</div>
-						<div class="check-number">
-							<div class="check-icon">
-								<i class="icon icon-car"></i>
-							</div>
-							<a class="link" href="#">WAUZZZ4BZYN115003</a>
-						</div>
-					</li>
-					<li class="recent-number">
-						<div class="check-info">
-							<span class="check-time">14:31</span>
-							<span class="check-category">проверен автомобиль</span>
-						</div>
-						<div class="check-number">
-							<div class="check-icon">
-								<i class="icon icon-car"></i>
-							</div>
-							<a class="link" href="#">WAUZZZ4BZYN115003</a>
-						</div>
-					</li>
-				</ul>
-				<ul class="recent-numbers-list">
-					<li class="recent-number">
-						<div class="check-info">
-							<span class="check-time">14:31</span>
-							<span class="check-category">проверен автомобиль</span>
-						</div>
-						<div class="check-number">
-							<div class="check-icon">
-								<i class="icon icon-car"></i>
-							</div>
-							<a class="link" href="#">WAUZZZ4BZYN115003</a>
-						</div>
-					</li>
-					<li class="recent-number">
-						<div class="check-info">
-							<span class="check-time">14:31</span>
-							<span class="check-category">проверен автомобиль</span>
-						</div>
-						<div class="check-number">
-							<div class="check-icon">
-								<i class="icon icon-car"></i>
-							</div>
-							<a class="link" href="#">WAUZZZ4BZYN115003</a>
-						</div>
-					</li>
-					<li class="recent-number">
-						<div class="check-info">
-							<span class="check-time">14:31</span>
-							<span class="check-category">проверен автомобиль</span>
-						</div>
-						<div class="check-number">
-							<div class="check-icon">
-								<i class="icon icon-car"></i>
-							</div>
-							<a class="link" href="#">WAUZZZ4BZYN115003</a>
-						</div>
-					</li>
-					<li class="recent-number">
-						<div class="check-info">
-							<span class="check-time">14:31</span>
-							<span class="check-category">проверен автомобиль</span>
-						</div>
-						<div class="check-number">
-							<div class="check-icon">
-								<i class="icon icon-car"></i>
-							</div>
-							<a class="link" href="#">WAUZZZ4BZYN115003</a>
-						</div>
-					</li>
-					<li class="recent-number">
-						<div class="check-info">
-							<span class="check-time">14:31</span>
-							<span class="check-category purchased">куплен полный отчёт для</span>
-						</div>
-						<div class="check-number">
-							<div class="check-icon">
-								<i class="icon icon-car"></i>
-							</div>
-							<a class="link" href="#">WAUZZZ4BZYN115003</a>
-						</div>
-					</li>
-					<li class="recent-number">
-						<div class="check-info">
-							<span class="check-time">14:31</span>
-							<span class="check-category purchased">куплен полный отчёт для</span>
-						</div>
-						<div class="check-number">
-							<div class="check-icon">
-								<i class="icon icon-car"></i>
-							</div>
-							<a class="link" href="#">WAUZZZ4BZYN115003</a>
-						</div>
-					</li>
-					<li class="recent-number">
-						<div class="check-info">
-							<span class="check-time">14:31</span>
-							<span class="check-category">проверен автомобиль</span>
-						</div>
-						<div class="check-number">
-							<div class="check-icon">
-								<i class="icon icon-car"></i>
-							</div>
-							<a class="link" href="#">WAUZZZ4BZYN115003</a>
-						</div>
-					</li>
-					<li class="recent-number">
-						<div class="check-info">
-							<span class="check-time">14:31</span>
-							<span class="check-category">проверен автомобиль</span>
-						</div>
-						<div class="check-number">
-							<div class="check-icon">
-								<i class="icon icon-car"></i>
-							</div>
-							<a class="link" href="#">WAUZZZ4BZYN115003</a>
-						</div>
-					</li>
-					<li class="recent-number">
-						<div class="check-info">
-							<span class="check-time">14:31</span>
-							<span class="check-category">проверен автомобиль</span>
-						</div>
-						<div class="check-number">
-							<div class="check-icon">
-								<i class="icon icon-car"></i>
-							</div>
-							<a class="link" href="#">WAUZZZ4BZYN115003</a>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</section>
-		<section id="about" class="about">
-			<div class="container">
-				<div class="section-blocks-wrapper clearfix">
-					<section class="section-block half">
-						<h2 class="section-title">О сервисе CheckAuto</h2>
-						<p class="main-text">Сервис «CheckAuto» позволяет покупателю подержанного автомобиля получить сведения об истории владения и эксплуатации интересующего транспортного средства и снизить вероятность мошенничества со стороны недобросовестного продавца. </p>
-						<p class="main-text" style="margin-bottom: -30px; padding-bottom: 8px;">Воспользовавшись сервисом, вы сэкономите свое время, в разы снижаете риск, например, купить угнанный, битый, или кредитный автомобиль. </p>
-					</section>
-					<section class="section-block invert half">
-						<h2 class="section-title">Как это работает?</h2>
-						<p class="main-text">Для того, чтобы получить отчет, введите vin номер и нажмите кнопку «ПРОВЕРИТЬ». &#9658; После этого у Вас на экране появится краткий отчет. В содержимом отчета доступна информация о наличии сведений по данному автомобилю. &#9658; Чтобы получить полную версию отчета онлайн и копию отчета на E-mail, необходимо ввести адрес электронной почты и нажать кнопку «Перейти к оплате». Стоимость полного отчета 299&#8381;. </p>
-					</section>
-					<section class="section-block spoiler" style="margin-top: -28px;">
-						<h1 class="section-title">Проверка авто по vin коду</h1>
-<p class="main-text">Вин (vin) номер – идентификационный код, позволяющий определить не только изготовителя вашего железного коня, но и узнать массу технических характеристик, модель и еще много дополнительной информации. К тому же этот «порядковый» номер просто незаменим, если вы хотите приобрести авто, узнать какие ограничения на него были наложены, не находится ли имущество в залоге у банка. ВИН – определенная «страховка» от рисков. Сегодня с помощью нашего сервиса вы можете в режиме онлайн получить необходимую вам информацию.</p>
-<h2 class="section-title">Вин – что это и где найти? </h2>
-<p class="main-text">Автомобильный идентификатор наносится не только на иностранные модели, цифровая шифровка присутствует и на отечественных машинах. Как правило код расположен:</p>
-<p class="main-text">Стойка кузова (на левой) со стороны салона.</p>
-<p class="main-text">Кресло пассажира (переднее) – на полу.</p>
-<p class="main-text">Подкапотного пространства (внутренняя стенка) – сторона пассажира.</p>
-<p class="main-text">В некоторых машинах идентификатор наносится на передние или задние крылья (внутренняя сторона), лобовое стекло (снизу), в багажнике (на полу). </p>
-              <div class="spoiler-button">
-							<i class="icon icon-down-arrows"></i>
-						</div>
-						  <div class="spoiler-content">
-<h2 class="section-title">Как расшифровывается ВИН-номер:</h2>
-<ol style="font-size: 18px; list-style-type: decimal; padding-bottom: 30px; margin-left: 20px;">
-<li><p class="main-text"><span style="font-weight:700">VIS</span> – как правило, это информация о годе выпуска авто, заводе, производящем такие модели, серийный номер. </p></li>
-<li><p class="main-text"><span style="font-weight:700">WMI</span> – это индекс производителя машины. Сюда включены 3 первые знака идентификатора. Информация: о стране изготовителе и названии компании-производителя. Понять какая страна несложно – код стран находится в свободном доступе. А вот конкретный производитель может быть зашифрован как в виде цифр так, и виде букв. </p></li>
-<li><p class="main-text"><span style="font-weight:700">VDS</span> – информация о комплектации авто и его модели. Это 6 обозначений, одно из них рассчитывается по специальной формуле – дополнительная защита от перебивки кода. К сожалению, сами вы не сможете расшифровать значение, потому что каждый изготовитель применяет свою методику по составлению VDS. </p></li>
-</ol>
-<h2 class="section-title">Vin номер - получаем полезную информацию</h2>
-<p class="main-text">Идентификатор позволит пользователю получить актуальную информацию по важным вопросам: </p>
-<ul style="font-size: 18px; list-style: inherit; margin-left: 20px;">
-<li><p class="main-text">Проверка на арест</p></li>
-<li><p class="main-text">Год выпуска, комплектация, количество владельцев</p></li>
-<li><p class="main-text">Кредит или залог автомобиля</p></li>
-<li><p class="main-text">Проверка на угон (по криминальным базам данных) </p></li>
-<li><p class="main-text">Наличие ограничений на регистрационные действия в ГИБДД</p></li>
-<li><p class="main-text">Использование в такси</p></li>
-<li><p class="main-text">Наличие фактов ДТП </p></li>
-<li><p class="main-text">Таможенная история</p></li>
-<li><p class="main-text">Сведения о страховке ОСАГО</p></li>
-<li><p class="main-text">Рыночная стоимость машины</p></li>
-</ul>
-
-						</div>
-					</section>
+					</div>
+					<div class="banner">
+						<a class="banner-link" href="report_example.html">
+							Пример полного отчета
+							<span class="icon icon-zoom"></span>
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>
-		<section class="check">
+		<section class="about">
 			<div class="container">
-				<div class="check-form">
-					<h5 class="form-title">Проверить наличие данных по машине:</h5>
-					<form action="reports.php">
-						<span class="input-hint">Введите 17 знаков VIN:<sup>*</sup></span>
-						<span class="input-list-enum">1</span><input name="vin" class="text-input" placeholder="X7MDC14BM90004876" type="text" minlength="17" maxlength="17" pattern="[0-9A-Z]{17}" required><br />
-						<span class="input-hint">Введите Email для отправки отчета:<sup>*</sup></span>
-						<span class="input-list-enum">2</span><input name="email" class="text-input" placeholder="Введите email" type="email" required><br />
-						<input class="button search" value="Проверить" type="submit">
-					</form>
-					<div class="view-report">
-						<i class="icon icon-pdf"></i>
-						<a class="link open-modal" data-modal="#modal4" href="#">
-							Посмотреть пример полного отчета
-						</a>
+				<div class="section-content">
+					<div class="row">
+						<div class="col-lg-6 col-md-6">
+							<div class="about-block yellow">
+								<h2 class="about-block-title">О сервисе VIN.JedPad.com</h2>
+								<p class="about-block-text">
+									Сервис VIN.JedPad.com позволяет покупателю подержанного автомобиля получить сведения об истории владения и эксплуатации интересующего транспортного средства и снизить вероятность мошенничества со стороны недобросовестного продавца.
+								</p>
+								<p class="about-block-text">
+									Воспользовавшись сервисом, вы сэкономите свое время, в разы снижаете риск, например, купить угнанный, битый, или кредитный автомобиль.
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6">
+							<div class="about-block blue">
+								<h2 class="about-block-title">Как это работает?</h2>
+								<p class="about-block-text">
+									Для того, чтобы получить отчет, введите vin номер и нажмите кнопку «ПРОВЕРИТЬ». После этого у Вас на экране появится краткий отчет. В содержимом отчета доступна информация о наличии сведений по данному автомобилю. Чтобы получить полную версию отчета онлайн и копию отчета на E-mail, необходимо ввести адрес электронной почты и нажать кнопку «Перейти к оплате». Стоимость полного отчета 319 ₽.
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-12 col-md-12">
+							<div class="about-block gray">
+								<h2 class="about-block-title">Проверка авто по vin коду</h2>
+								<p class="about-block-text">
+									Вин (vin) номер – идентификационный код, позволяющий определить не только изготовителя вашего железного коня, но и узнать массу технических характеристик, модель и еще много дополнительной информации. К тому же этот «порядковый» номер просто незаменим, если вы хотите приобрести авто, узнать какие ограничения на него были наложены, не находится ли имущество в залоге у банка. ВИН – определенная «страховка» от рисков. Сегодня с помощью нашего сервиса вы можете в режиме онлайн получить необходимую вам информацию.
+								</p>
+								<div id="spoiler" class="spoiler-content collapse">
+									<p class="about-block-text">
+										Вин (vin) номер – идентификационный код, позволяющий определить не только изготовителя вашего железного коня, но и узнать массу технических характеристик, модель и еще много дополнительной информации. К тому же этот «порядковый» номер просто незаменим, если вы хотите приобрести авто, узнать какие ограничения на него были наложены, не находится ли имущество в залоге у банка. ВИН – определенная «страховка» от рисков. Сегодня с помощью нашего сервиса вы можете в режиме онлайн получить необходимую вам информацию.
+									</p>
+								</div>
+								<div class="spoiler-button collapsed" data-toggle="collapse" data-target="#spoiler" aria-expanded="false">
+									<span class="icon icon-arrows-down"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="offers">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-headline">
+						<span class="icon icon-package"></span>
+						Пакетные предложения
+					</h2>
+				</div>
+				<div class="section-content">
+					<div class="row">
+						<div class="offers-slider owl-carousel owl-theme">
+							<div class="col-lg-12">
+								<div class="offer">
+									<h3 class="offer-title">Пакет 1</h3>
+									<span class="offer-info">до 100 проверок в месяц</span>
+									<span class="offer-price">99 р. отчет</span>
+									<a class="button lg rounded modal-block" href="#order-window">Заказать</a>
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<div class="offer">
+									<h3 class="offer-title">Пакет 2</h3>
+									<span class="offer-info">от 100 до 300 проверок в месяц</span>
+									<span class="offer-price">85 р. отчет</span>
+									<a class="button lg rounded modal-block" href="#order-window">Заказать</a>
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<div class="offer">
+									<h3 class="offer-title">Пакет 3</h3>
+									<span class="offer-info">от 300 до 500 проверок в месяц</span>
+									<span class="offer-price">80 р. отчет</span>
+									<a class="button lg rounded modal-block" href="#order-window">Заказать</a>
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<div class="offer">
+									<h3 class="offer-title">Пакет 4</h3>
+									<span class="offer-info">от 500 до 1000 проверок в месяц</span>
+									<span class="offer-price">75 р. отчет</span>
+									<a class="button lg rounded modal-block" href="#order-window">Заказать</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="features">
+			<div class="container">
+				<div class="section-content">
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-sm-3">
+							<div class="feature">
+								<div class="feature-icon">
+									<span class="icon icon-like"></span>
+								</div>
+								<span class="feature-text">Удобный личный кабинет</span>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-3">
+							<div class="feature">
+								<div class="feature-icon">
+									<span class="icon icon-api"></span>
+								</div>
+								<span class="feature-text">Работа по API</span>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-3">
+							<div class="feature">
+								<div class="feature-icon">
+									<span class="icon icon-sale"></span>
+								</div>
+								<span class="feature-text">Спец. условия при работе совместно с JedPad.com</span>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-3">
+							<div class="feature">
+								<div class="feature-icon">
+									<span class="icon icon-smartphone"></span>
+								</div>
+								<span class="feature-text">Мобильное приложение</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="form">
+			<div class="container">
+				<div class="section-content">
+					<div class="row check-form">
+						<form class="clearfix" action="reports.php">
+							<div class="col-lg-3 col-lg-offset-2 col-md-4 col-sm-6">
+								<input class="text-input" placeholder="VIN" type="text" required name="vin">
+							</div>
+							<div class="col-lg-3 col-md-4 col-sm-6">
+								<input class="text-input" placeholder="E-Mail для отчета" type="text" required  name="email">
+							</div>
+							<div class="col-lg-2 col-md-4 col-sm-12">
+								<input class="button" value="Проверить авто" type="submit">
+							</div>
+						</form>
+						<div class="col-lg-3 col-lg-offset-7 col-md-12 full-report-link">
+							<a href="report_example.html">Посмотреть пример полного отчета</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 		<footer class="footer">
 			<div class="container">
-				<div class="footer-left clearfix">
-					<a class="site-logo" href="index.html">
-						<img src="img/site_logo_dark.png" alt="">
-					</a>
-					<h2 class="site-description">
-						Проверка истории<br>
-						автомобиля по <span>VIN</span> коду<br>
-						<span>по 29 пунктам</span>
-					</h2>
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-4">
+						<a class="site-logo" href="#">
+							<img src="img/site_logo.png" alt="">
+						</a>
+					</div>
+					<div class="col-lg-3 col-lg-offset-4 col-md-3 col-md-offset-3 col-sm-4">
+						<span class="footer-info">
+							Техническая поддержка работает:<br>
+							Пн-Пт с 9 до 18 часов
+						</span>
+					</div>
+					<div class="col-lg-2 col-md-3 col-sm-4">
+						<span class="footer-info">
+							E-Mail: <a href="mailto:info@jedpad.com">info@jedpad.com</a><br>
+							Телефон: 8 (981) 104-44-72<br>
+							Или <a href="#">напишите нам</a>
+						</span>
+					</div>
 				</div>
-				<div class="footer-right">
-					<span>Контакты:</span>
-					<ul class="contact-info">
-						<li class="contact-info-item">
-							E-Mail:
-							<a class="link" href="mailto:info@checkauto.cars-bazar.ru">info@checkauto.cars-bazar.ru</a>
-						</li>
-						<li class="contact-info-item">
-							Телефон:
-							<span>8 (981) 104-44-72</span>
-						</li>
-						<li class="contact-info-item">
-							Или
-							<a class="link open-modal" data-modal="#modal3" href="#">напишите нам</a>
-						</li>
-						<li class="contact-info-item">
-							Техническая поддержка работает:
-							<span>Пн-Пт с 9 до 18 часов</span>
-						</li>
-					</ul>
-				</div>
-				<span class="copyright">
-					© 2015 - 2017
-					<a class="link" href="index.html">checkauto.cars-bazar.ru</a>
+				<span class="copyright">© 2015 - 2017
+					<a href="#">vin.jedpad.com</a>
 				</span>
 			</div>
 		</footer>
-
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="vendor/jquery.inputmask.bundle.min.js"></script>
-		<script src="js/jedpad.js"></script>
-		<script src="js/lastvins.js"></script>
-		<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/44533300" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+		<script src="vendor/jquery.fancybox.pack.js"></script>
+		<script src="vendor/owl.carousel.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>

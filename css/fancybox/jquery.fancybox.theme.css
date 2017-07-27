@@ -1,0 +1,36 @@
+.fancybox-skin {
+	background-color: #fff;
+	color: #0e1c2f;
+	border: 15px solid #ffd633;
+	border-radius: 40px;
+	overflow: hidden;
+}
+
+.fancybox-opened .fancybox-skin {
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+}
+
+.fancybox-close {
+	width: 23px;
+	height: 23px;
+	background: url(../../img/sprite.png) -197px -581px;
+	top: 20px;
+	right: 20px;
+	-webkit-transition: .2s;
+	transition: .2s;
+}
+
+.fancybox-close:hover {
+	opacity: .75;
+}
+
+@media screen and (max-width: 639px) {
+	.fancybox-close {
+		width: 12px;
+		height: 12px;
+		background-position: -234px -586px;
+		top: 15px;
+		right: 15px;
+	}
+}

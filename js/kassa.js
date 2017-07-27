@@ -5,7 +5,7 @@ var getYandexKassaForm = function(){
         var email = $("#buyForm [name=email]").val(),
             phone = $("#buyForm [name=phone]").val(),
             promo = $("#buyForm [name=promo]").val(),
-            amount = $("#buyForm .report-price .price").text();//.attr("data-base"),
+            amount = $("#buyForm .report-price").attr("data-base");
 
         $("#buyForm [name=sum]").val(amount);
         //$("#buyForm [name=sum]").val("1");
@@ -17,13 +17,13 @@ var getYandexKassaForm = function(){
 }
 window.getYandexKassaForm = getYandexKassaForm;
 $(document).ready(function(){
-    realamount = $("#buyForm .report-price .price").text();
+    realamount = $("#buyForm .report-price").attr("data-base");
     $(".payment-button").on("click",function(e){
         getYandexKassaForm();
         return true;
     });
     $("[name=promo]").on("keyup change",function(e){
-        var val = $(this).val(),base_val = $("#buyForm .report-price .price").attr("data-base");
+        var val = $(this).val(),base_val = $("#buyForm .report-price").attr("data-base");
         if(base_val==null || typeof(base_val)=="undefined"){
             base_val =$("#buyForm .report-price .price").text();
             $("#buyForm .report-price .price").attr("data-base",base_val);
@@ -36,7 +36,9 @@ $(document).ready(function(){
                 data:{p:val},
                 success:function(d){
                     if(typeof(d.response)!="undefined" && d.response== "ok"){
-                        $("#buyForm .report-price .price").text(base_val-d.discount);
+                        $("#buyForm .report-price").attr("data-base",base_val-d.discount);
+                        $("#buyForm .report-price .price").addClass("old-price");
+                        $("#buyForm .report-price .new-price").show().html((base_val-d.discount)+'&nbsp;&#8381;');
                     }
                 }
             });

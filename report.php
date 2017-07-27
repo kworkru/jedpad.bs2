@@ -18,7 +18,10 @@ $cb = new cb\ClientBase();
 $current = $cb->get($rq);
 $result = ["status"=>"unknown"];
 $resultJson = "{}";
-//if(file_exists("store/".$rq["vin"].".json"))echo file_get_contents("store/".$rq["vin"].".json"); exit;
+// if(file_exists("store/".$rq["vin"].".json"))echo file_get_contents("store/".$rq["vin"].".json"); exit;
+if($rq["vin"] == "WF0RXXGCDR8R45807"){
+    echo file_get_contents("store/report.json"); exit;
+}
 // проверка на существование записи
 if(count($current)){
     foreach($current as $row){
