@@ -52,7 +52,7 @@ input {
 	-webkit-box-shadow: none;
 	        box-shadow: none;
 	-webkit-appearance: none;
-  	-webkit-border-radius: 0;	        
+  	-webkit-border-radius: 0;
 }
 
 a {
@@ -73,7 +73,7 @@ h4, h5, h6 {
 }
 
 h1, h2, h3 {
-	font-size: 36px;	
+	font-size: 36px;
 }
 
 h4, h5, h6 {
@@ -274,7 +274,7 @@ h4, h5, h6 {
 }
 
 .icon-lock {
-	width: 18px;	
+	width: 18px;
 	height: 23px;
 	background-position: -167px -581px;
 }
@@ -282,7 +282,7 @@ h4, h5, h6 {
 .icon-like {
 	width: 77px;
 	height: 79px;
-	background-position: -26px -153px;	
+	background-position: -26px -153px;
 }
 
 .icon-api {
@@ -398,7 +398,7 @@ h4, h5, h6 {
 }
 
 .button.lg {
-	font-size: 24px;	
+	font-size: 24px;
 }
 
 .button.rounded {
@@ -519,10 +519,23 @@ h4, h5, h6 {
 }
 
 .hero {
+	position: relative;
 	background: url(../img/hero_bg.jpg) center center no-repeat;
 	background-size: cover;
 	color: #fff;
 	padding: 200px 0 140px;
+	overflow: hidden;
+}
+
+.hero-video {
+	position: absolute;
+	/*height: 100%;*/
+	width: 100%;
+	top: 0;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	filter: blur(8px);
 }
 
 .site-headline {
@@ -559,8 +572,8 @@ h4, h5, h6 {
 	display: inline-block;
 	content: "";
 	width: 14px;
-	height: 19px;	
-	background: url(../img/sprite.png) -137px -583px no-repeat;	
+	height: 19px;
+	background: url(../img/sprite.png) -137px -583px no-repeat;
 	vertical-align: bottom;
 	margin-right: 7px;
 }
@@ -573,7 +586,7 @@ h4, h5, h6 {
 
 .check-category-title {
 	display: block;
-	font-family: "Circe Light", sans-serif;	
+	font-family: "Circe Light", sans-serif;
 	font-size: 13px;
 	opacity: .75;
 	margin-top: 10px;
@@ -614,13 +627,13 @@ h4, h5, h6 {
 .fact-blocks-row:first-child .fact-block-wrapper:nth-child(2) .fact-block:first-child {
 	height: 380px;
 	background: url(../img/fact_img2.jpg) center center no-repeat;
-	background-size: cover;	
+	background-size: cover;
 }
 
 .fact-blocks-row:first-child .fact-block-wrapper:nth-child(2) .fact-block:nth-child(2) {
 	height: 290px;
 	background: url(../img/fact_img3.jpg) center center no-repeat;
-	background-size: cover;	
+	background-size: cover;
 }
 
 .fact-blocks-row:nth-child(2) .fact-block {
@@ -669,7 +682,7 @@ h4, h5, h6 {
 
 .fact-text {
 	font-family: "Circe ExtraBold", sans-serif;
-	text-transform: uppercase;		
+	text-transform: uppercase;
 }
 
 .fact-blocks-row:first-child .fact-text {
@@ -1048,7 +1061,7 @@ h4, h5, h6 {
 }
 
 .promo {
-	font-size: 36px;	
+	font-size: 36px;
 	background: url(../img/form_bg.jpg) center center no-repeat;
 	background-size: cover;
 	padding: 40px 0;
@@ -1228,7 +1241,7 @@ h4, h5, h6 {
 		padding: 15px 0;
 	}
 
-	.report-data-title, 
+	.report-data-title,
 	.report-data-value {
 		font-size: 20px;
 		padding: 0 10px;
@@ -1279,7 +1292,7 @@ h4, h5, h6 {
 	.report-info-item {
 		font-size: 13px;
 	}
-	
+
 	.report-info-img {
 		display: none;
 	}
@@ -1406,6 +1419,10 @@ h4, h5, h6 {
 
 	.hero {
 		padding: 80px 0 40px;
+	}
+
+	.hero-video {
+		display: none;
 	}
 
 	.hero .check-form {
@@ -1597,5 +1614,5 @@ h4, h5, h6 {
 @media screen and (min-width: 768px) {
 	.site-nav-menu.collapse {
     	display: inline-block;
-  	}	
+  	}
 }
