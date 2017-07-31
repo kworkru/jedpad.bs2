@@ -478,5 +478,15 @@
 		<script src="vendor/owl.carousel.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/main.js"></script>
+		<script>
+		$(document).ready(function(){
+			// Навигация в отчете
+			var controller = new ScrollMagic.Controller();
+			new ScrollMagic.Scene({
+					duration: $(".report-wrapper").height() - 200,
+					offset: $(".header").height() + 40
+				}).setPin(".report-nav").addTo(controller);
+		});
+		</script>
 	</body>
 </html>

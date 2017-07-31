@@ -591,6 +591,7 @@
 										<span class="price">450 р.</span>
 										<!-- <span class="old-price">450 р.</span> -->
 										<span class="new-price hidden">319 р.</span>
+										<span class="pay-price hidden">450</span>
 									</div>
 									<form action="https://money.yandex.ru/eshop.xml" method="POST">
 											<input type="hidden" name="shopId" value="113311" />

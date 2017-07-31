@@ -5,7 +5,7 @@ var getYandexKassaForm = function(){
         var email = $("#buyForm [name=email]").val(),
             phone = $("#buyForm [name=phone]").val(),
             promo = $("#buyForm [name=promo]").val(),
-            amount = $("#buyForm .report-price").attr("data-base");
+            amount = $("#buyForm .report-price .pay-price").text();
 
         $("#buyForm [name=sum]").val(amount);
         //$("#buyForm [name=sum]").val("1");
@@ -20,7 +20,7 @@ $(document).ready(function(){
     realamount = $("#buyForm .report-price").attr("data-base");
     $(".payment-button").on("click",function(e){
         getYandexKassaForm();
-        return true;
+        return false;
     });
     $("[name=promo]").on("keyup change",function(e){
         var val = $(this).val(),base_val = $("#buyForm .report-price").attr("data-base");
@@ -36,9 +36,11 @@ $(document).ready(function(){
                 data:{p:val},
                 success:function(d){
                     if(typeof(d.response)!="undefined" && d.response== "ok"){
-                        $("#buyForm .report-price").attr("data-base",base_val-d.discount);
+                        var amount = base_val-d.discount;
+                        $("#buyForm .report-price .pay-price").text(amount);
                         $("#buyForm .report-price .price").addClass("old-price");
-                        $("#buyForm .report-price .new-price").show().html((base_val-d.discount)+'&nbsp;&#8381;');
+                        $("#buyForm .report-price .new-price").html(amount+'&nbsp;&#8381;').removeClass('hidden');
+                        $("#buyForm [name=sum]").val(amount);
                     }
                 }
             });

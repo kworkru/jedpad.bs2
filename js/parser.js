@@ -994,12 +994,7 @@ var getFullReport = function(d){
     }
     putData($cc,zal);
     $c.append('<div class="report-buttons"><a class="button rounded print" href="#"><span class="icon icon-print"></span>Версия для печати</a><a class="button rounded pdf" href="#"><span class="icon icon-pdf"></span>PDF для печати</a></div>');
-    // Навигация в отчете
-	var controller = new ScrollMagic.Controller();
-	new ScrollMagic.Scene({
-			duration: $(".report-wrapper").height() - 200,
-			offset: $(".header").height() + 40
-		}).setPin(".report-nav").addTo(controller);
+
     $(".promo").show();
     //makePDF(siteLogo,qp.vin,qp.email);
     //send mail
@@ -1203,6 +1198,12 @@ $(document).ready(function(){
                     //     yaCounter44533300.reachGoal('get-full-report');
                     //     getFullReport(d);
                     // }
+                    // Навигация в отчете
+                	var controller = new ScrollMagic.Controller();
+                	new ScrollMagic.Scene({
+                			duration: $(".report-wrapper").height() - 200,
+                			offset: $(".header").height() + 40
+                		}).setPin(".report-nav").addTo(controller);
                 }
                 catch(e){
                     console.debug(e);
