@@ -20,7 +20,11 @@ $result = ["status"=>"unknown"];
 $resultJson = "{}";
 // if(file_exists("store/".$rq["vin"].".json"))echo file_get_contents("store/".$rq["vin"].".json"); exit;
 if($rq["vin"] == "WF0RXXGCDR8R45807"){
-    echo file_get_contents("store/report.json"); exit;
+    $result = json_decode(file_get_contents("store/report.json"),true);
+    $result["type"]=$rq["type"];
+    $result["status"]=$rq["type"];
+    $resultJson = json_encode($result,JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE);
+    echo $resultJson; exit;
 }
 // проверка на существование записи
 if(count($current)){

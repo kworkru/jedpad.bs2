@@ -13,6 +13,20 @@
 		<title>VIN JedPad</title>
 	</head>
 	<body>
+		<div id="order-window" class="modal-window">
+			<div class="modal-window-header">
+				<h3 class="modal-window-headline">Заказать пакет</h3>
+			</div>
+			<div class="modal-window-content">
+				<form method="post">
+					<input name="topic" value="Заказ пакета" type="hidden">
+					<input class="text-input" placeholder="Имя" type="text" required>
+					<input class="text-input" placeholder="Телефон" type="text" required>
+					<input class="text-input" placeholder="E-Mail" type="text" required>
+					<input class="button lg rounded" value="Отправить" type="submit">
+				</form>
+			</div>
+		</div>
 		<a href="#waitreport" style="display:none;" id="open_waitreport"></a>
 		<div id="waitreport" class="modal-window">
 			<div class="modal-window-header">
@@ -431,7 +445,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="promo" style="display:none;">
+		<section class="promo hidden">
 			<div class="container">
 				<div class="section-content">
 					<div class="row">
@@ -451,7 +465,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="offers">
+		<section class="offers hidden">
 			<div class="container">
 				<div class="section-header">
 					<h2 class="section-headline">
@@ -499,7 +513,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="features">
+		<section class="features hidden">
 			<div class="container">
 				<div class="section-content">
 					<div class="row">
@@ -587,10 +601,9 @@
 							<div class="payment-form">
 								<div class="section-form">
 									<h4 class="form-headline">Вся правда об автомобиле по цене бизнес ланча!</h4>
-									<div class="report-price" data-base="450">
-										<span class="price">450 р.</span>
-										<!-- <span class="old-price">450 р.</span> -->
-										<span class="new-price hidden">319 р.</span>
+									<div class="report-price" data-base="319">
+										<span class="old-price">450 р.</span>
+										<span class="new-price">319 р.</span>
 										<span class="pay-price hidden">450</span>
 									</div>
 									<form action="https://money.yandex.ru/eshop.xml" method="POST">
@@ -611,7 +624,7 @@
 											<label for="promo">Ввести промо-код</label>
 										</div>
 										<input class="text-input" type="text" name="promo">
-										<input class="button rounded" value="Применить промо-код" type="button">
+										<input class="button rounded promoButton" value="Применить промо-код" type="button">
 										<div class="input-group">
 											<input id="conditions" type="checkbox" required checked>
 											<label for="conditions">Я согласен с <a href="#">условиями сервиса*</a>

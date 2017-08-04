@@ -1188,11 +1188,15 @@ $(document).ready(function(){
                                 console.debug(d);
                             }
                         });
+
                     }
                     else if(d.status=="full"){
                         console.debug(yaCounter44533300,'get-full-report occurs');
                         yaCounter44533300.reachGoal('get-full-report');
                         getFullReport(d,false,qp.example);
+                        // $(".promo").removeClass("hidden");
+                        $(".features").removeClass("hidden");
+                        $(".offers").removeClass("hidden");
                     }
                     // if(qp.type=="full"){
                     //     yaCounter44533300.reachGoal('get-full-report');

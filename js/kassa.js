@@ -22,7 +22,8 @@ $(document).ready(function(){
         getYandexKassaForm();
         return false;
     });
-    $("[name=promo]").on("keyup change",function(e){
+    $(".promoButton").on("click",function(e){
+    // $("[name=promo]").on("keyup change",function(e){
         var val = $(this).val(),base_val = $("#buyForm .report-price").attr("data-base");
         if(base_val==null || typeof(base_val)=="undefined"){
             base_val =$("#buyForm .report-price .price").text();
