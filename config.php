@@ -12,12 +12,12 @@ $cbConfig = [
             "email" => "newsletter@jedpad.com"
         ],
         "templates"=>[
-            // "fast"=>"mail/templates/fast_carsbazar.html",
             "fast"=>"mail/templates/fast_jedpad.html",
             // "fast"=>"mail/templates/text.html",
             // "fast"=>"1502561",
             "full"=>"1502561",
         ],
+
     ],
     "clientBase" => [
         "key" => "d9db2c21bc7497ab48749655c430995a",
