@@ -1024,7 +1024,12 @@ var getFullReport = function(d){
             console.debug("pdf loaded");
         }
     });
-
+    $(".pdf").on("click",function(e){
+	    window.open("pdf.php?cb_order_id="+oid,"__blank");
+	});
+    $(".print").on("click",function(e){
+		window.print();
+	});
 };
 var validateVin = function(vin){
     var get_check_digit = function(vin) {
@@ -1040,6 +1045,9 @@ var validateVin = function(vin){
 };
 
 $(document).ready(function(){
+    $(".modal-block").on("click",function(){
+        $("[name=packet]").val($(this).closest(".offer-title").html());
+    });
     $(".pdf").on("click",function(e){
 		//makePDF(siteLogo,qp.vin);
         var oid = qp.cb_order_id;

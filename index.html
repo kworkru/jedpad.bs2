@@ -18,11 +18,12 @@
 				<h3 class="modal-window-headline">Заказать пакет</h3>
 			</div>
 			<div class="modal-window-content">
-				<form method="post">
+				<form method="post" action="mail/order.php">
 					<input name="topic" value="Заказ пакета" type="hidden">
-					<input class="text-input" placeholder="Имя" type="text" required>
-					<input class="text-input" placeholder="Телефон" type="text" required>
-					<input class="text-input" placeholder="E-Mail" type="text" required>
+					<input name="packet" value="" type="hidden">
+					<input name="name" class="text-input" placeholder="Имя" type="text" required>
+					<input name="phone" class="text-input" placeholder="Телефон" type="text" required>
+					<input name="email" class="text-input" placeholder="E-Mail" type="text" required>
 					<input class="button lg rounded" value="Отправить" type="submit">
 				</form>
 			</div>
