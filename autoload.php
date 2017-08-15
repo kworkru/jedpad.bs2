@@ -21,6 +21,12 @@ function __autoload($className){
         require $filename;
 		return true;
     }
+	$filename = $vendorDir.'/'.str_replace('\\','/',$className).'.php';
+	// echo 'vendorfile: '.$filename.' (exists ?= '.(file_exists($filename)?'true':'false').')'."\n";
+	if (file_exists($filename) && is_readable($filename)) {
+        require $filename;
+		return true;
+    }
 	$file = str_replace('\\','/',$className);
 	require_once $sourceDir.'/'.$file.'.php';
 	return true;

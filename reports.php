@@ -601,15 +601,15 @@
 							<div class="payment-form">
 								<div class="section-form">
 									<h4 class="form-headline">Вся правда об автомобиле по цене бизнес ланча!</h4>
-									<div class="report-price" data-base="319">
+									<div class="report-price" data-base="219">
 										<span class="old-price">450 р.</span>
-										<span class="new-price">319 р.</span>
-										<span class="pay-price hidden">450</span>
+										<span class="new-price">219 р.</span>
+										<span class="pay-price hidden">219</span>
 									</div>
 									<form action="https://money.yandex.ru/eshop.xml" method="POST">
 											<input type="hidden" name="shopId" value="113311" />
 											<input type="hidden" name="scid" value="97661" />
-											<input type="hidden" name="sum" value="450" />
+											<input type="hidden" name="sum" value="219" />
 											<input type="hidden" name="customerNumber" value="" />
 											<input type="hidden" name="cps_email" value="" />
 											<input type="hidden" name="cps_phone" value="" />

@@ -23,6 +23,23 @@ if($rq["vin"] == "WF0RXXGCDR8R45807"){
     $result = json_decode(file_get_contents("store/report.json"),true);
     $result["type"]=$rq["type"];
     $result["status"]=$rq["type"];
+
+    $sp = new cb\SendPulse;
+    $edata = [
+        "email"=>$_rqEmail,
+        "vin"=>$cbdata["vin"],
+        "payed_vin"=>$cbdata["payed"],
+        //"city"=>"moscow",
+        //"region"=>"moscow",
+        "model"=>$result["history"]["RequestResult"]["vehicle"]["model"],
+        "brand"=>$result["vin"]["brand"],
+        "cb_order_id"=>$cbdata["ID"],
+        "year"=>$result["history"]["RequestResult"]["vehicle"]["year"],
+        "report"=>$result
+    ];
+    $result["sp"]=["addcontact"=>"","send"=>""];
+    $result["sp"]["addcontact"]= $sp->addContact($edata);
+    $result["sp"]["send"]= $sp->send($edata);
     $resultJson = json_encode($result,JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE);
     echo $resultJson; exit;
 }
@@ -106,8 +123,7 @@ $cbdata["email"] = $_rqEmail;
 $cbdata["report"]=$resultJson;
 $cbdata["reportLink"] = "http://checkauto.cars-bazar.ru/admin/?vin=".$rq["vin"];
 $cb->update($cbdata);
-$us = new cb\Unisend();
-$us->addContact([
+$edata = array(
     "email"=>$_rqEmail,
     "vin"=>$cbdata["vin"],
     "payed_vin"=>$cbdata["payed"],
@@ -118,7 +134,12 @@ $us->addContact([
     "cb_order_id"=>$cbdata["ID"],
     "year"=>$result["history"]["RequestResult"]["vehicle"]["year"],
     "report"=>$result
-]);
+);
+// $us = new cb\Unisend();
+// $us->addContact($edata);
+$sp = new cb\SendPulse;
+$sp->addContact($edata);
+$sp->send($edata);
 $outlogs = ob_get_clean();
 core\Log::debug($outlogs);
 echo $resultJson;

@@ -5,15 +5,30 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/fancybox/jquery.fancybox.css">
 		<link rel="stylesheet" href="css/fancybox/jquery.fancybox.theme.css">
 		<link rel="stylesheet" href="css/owl.carousel.min.css">
 		<link rel="stylesheet" href="css/owl.theme.default.css">
-		<link rel="stylesheet" href="css/main.css">
 		<title>VIN JedPad</title>
 	</head>
-	<body data-spy="scroll" data-target="#report-nav">
+	<body>
 		<div id="order-window" class="modal-window">
+			<div class="modal-window-header">
+				<h3 class="modal-window-headline">Заказать пакет</h3>
+			</div>
+			<div class="modal-window-content">
+				<form method="post">
+					<input name="topic" value="Заказ пакета" type="hidden">
+					<input class="text-input" placeholder="Имя" type="text" required>
+					<input class="text-input" placeholder="Телефон" type="text" required>
+					<input class="text-input" placeholder="E-Mail" type="text" required>
+					<input class="button lg rounded" value="Отправить" type="submit">
+				</form>
+			</div>
+		</div>
+		<a href="#waitreport" style="display:none;" id="open_waitreport"></a>
+		<div id="waitreport" class="modal-window">
 			<div class="modal-window-header">
 				<h3 class="modal-window-headline">Заказать пакет</h3>
 			</div>
@@ -57,7 +72,11 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-3 col-md-4">
-						<nav id="report-nav" class="report-nav">
+						<div  id="report-nav" class="report-nav">
+							<!-- <div class="locked-nav">
+								<span class="icon icon-lock-lg"></span>
+								<span class="locked-nav-text">Все данные доступны в полном отчете</span>
+							</div> -->
 							<ul class="report-nav-menu nav">
 								<li class="report-nav-menu-item">
 									<a class="anchor" href="#report-category-1">Общие сведения об автомобиле</a>
@@ -96,26 +115,22 @@
 									<a class="anchor" href="#report-category-12">Информация о нахождении в залоге у банков</a>
 								</li>
 							</ul>
-						</nav>
+						</div>
 					</div>
-					<div class="col-lg-9 col-md-8">
+					<div class="col-lg-9 col-md-8 vin-report">
 						<div class="section-header">
-							<h4 class="section-headline">Пример полного отчета</h4>
+							<h4 class="section-headline">Краткий отчет</h4>
 						</div>
 						<div class="section-content">
 							<div class="report-buttons">
-								<a class="button rounded print" href="#">
-									<span class="icon icon-print"></span>
-									Версия для печати
-								</a>
-								<a class="button rounded" href="#">
-									<span class="icon icon-pdf  pdf"></span>
-									PDF для печати
+								<a class="button rounded" href="#buyForm">
+									<span class="icon icon-doc"></span>
+									Рекомендуем получить полный отчет
 								</a>
 							</div>
 							<span class="checkable-vin">NLAFD75308W072210</span>
 							<ul class="report-wrapper">
-								<li id="report-category-1" class="report-category">
+								<li class="report-category">
 									<h4 class="report-category-title">Общие сведения об автомобиле</h4>
 									<ul class="report-data">
 										<li class="report-data-item">
@@ -140,182 +155,297 @@
 										</li>
 										<li class="report-data-item">
 											<h5 class="report-data-title">Цвет</h5>
-											<span class="report-data-value">Серый</span>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
 										</li>
 										<li class="report-data-item">
 											<h5 class="report-data-title">Комплектация</h5>
-											<span class="report-data-value">Седан</span>
-										</li>
-									</ul>
-								</li>
-								<li id="report-category-2" class="report-category">
-									<h4 class="report-category-title">Данные таможни</h4>
-									<ul class="report-data">
-										<li class="report-data-item">
-											<h5 class="report-data-title">Дата декларации</h5>
-											<span class="report-data-value">2008/10/06</span>
-										</li>
-										<li class="report-data-item">
-											<h5 class="report-data-title">Страна вывоз</h5>
-											<span class="report-data-value">Турция</span>
-										</li>
-									</ul>
-								</li>
-								<li id="report-category-3" class="report-category">
-									<h4 class="report-category-title">Данные ОСАГО</h4>
-									<ul class="report-data">
-										<li class="report-data-item">
-											<h5 class="report-data-title">Дата запроса действительности полиса</h5>
-											<span class="report-data-value">2017/03/30</span>
-										</li>
-										<li class="report-data-item">
-											<h5 class="report-data-title">Серия договора</h5>
-											<span class="report-data-value">EEE</span>
-										</li>
-										<li class="report-data-item">
-											<h5 class="report-data-title">Номер договора</h5>
-											<span class="report-data-value">0385473973</span>
-										</li>
-										<li class="report-data-item">
-											<h5 class="report-data-title">Ограничения лиц допущенных к управлению ТС</h5>
-											<span class="report-data-value">С ограничениями</span>
-										</li>
-										<li class="report-data-item">
-											<h5 class="report-data-title">Страховая компания</h5>
-											<span class="report-data-value">РЕСО-гарантия</span>
-										</li>
-										<li class="report-data-item">
-											<h5 class="report-data-title">Примерная стоимость ОСАГО на 1 год</h5>
-											<span class="report-data-value">10570 рублей</span>
-										</li>
-									</ul>
-								</li>
-								<li id="report-category-4" class="report-category">
-									<h4 class="report-category-title">Пробег автомобиля</h4>
-									<ul class="report-data">
-										<li class="report-data-item">
-											<h5 class="report-data-title">Значение</h5>
-											<span class="report-data-value">Данные не зафиксированы</span>
-										</li>
-									</ul>
-								</li>
-								<li id="report-category-5" class="report-category">
-									<h4 class="report-category-title">Сведения об участии в ДТП</h4>
-									<ul class="report-data column">
-										<li class="report-data-item">
-											<h5 class="report-data-title">Данные об участии в ДТП не найдены</h5>
 											<span class="report-data-value">
-												Мы не смогли найти факты, которые указывают на наличие ДТП.<br>
-												Тем не менее, это не означает, что данный автомобиль<br>
-												НЕ УЧАСТВОВАЛ в ДТП
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
 											</span>
 										</li>
 									</ul>
 								</li>
-								<li id="report-category-6" class="report-category">
+								<li class="report-category">
+									<h4 class="report-category-title">Данные таможни</h4>
+									<ul class="report-data">
+										<li class="report-data-item">
+											<h5 class="report-data-title">Дата декларации</h5>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
+										</li>
+										<li class="report-data-item">
+											<h5 class="report-data-title">Страна вывоз</h5>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
+										</li>
+									</ul>
+								</li>
+								<li class="report-category">
+									<h4 class="report-category-title">Данные ОСАГО</h4>
+									<ul class="report-data">
+										<li class="report-data-item">
+											<h5 class="report-data-title">Дата запроса действительности полиса</h5>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
+										</li>
+										<li class="report-data-item">
+											<h5 class="report-data-title">Серия договора</h5>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
+										</li>
+										<li class="report-data-item">
+											<h5 class="report-data-title">Номер договора</h5>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
+										</li>
+										<li class="report-data-item">
+											<h5 class="report-data-title">Ограничения лиц допущенных к управлению ТС</h5>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
+										</li>
+										<li class="report-data-item">
+											<h5 class="report-data-title">Страховая компания</h5>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
+										</li>
+										<li class="report-data-item">
+											<h5 class="report-data-title">Примерная стоимость ОСАГО на 1 год</h5>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
+										</li>
+									</ul>
+								</li>
+								<li class="report-category">
+									<h4 class="report-category-title">Пробег автомобиля</h4>
+									<ul class="report-data">
+										<li class="report-data-item">
+											<h5 class="report-data-title">Значение</h5>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
+										</li>
+									</ul>
+								</li>
+								<li class="report-category">
+									<h4 class="report-category-title">Сведения об участии в ДТП</h4>
+									<ul class="report-data column single">
+										<li class="report-data-item">
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
+										</li>
+									</ul>
+								</li>
+								<li class="report-category">
 									<h4 class="report-category-title">Количество владельцев</h4>
 									<ul class="report-data">
 										<li class="report-data-item">
 											<h5 class="report-data-title">Владельцев</h5>
-											<span class="report-data-value">4</span>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
 										</li>
 									</ul>
 								</li>
-								<li id="report-category-7" class="report-category">
+								<li class="report-category">
 									<h4 class="report-category-title">История регистрационных действий</h4>
 									<ul class="report-data">
 										<li class="report-data-item">
 											<h5 class="report-data-title">Дата последней операции</h5>
-											<span class="report-data-value">2008-11-11</span>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
 										</li>
 										<li class="report-data-item">
 											<h5 class="report-data-title">Дата последней операции</h5>
-											<span class="report-data-value">2014-05-02</span>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
 										</li>
 										<li class="report-data-item">
 											<h5 class="report-data-title">Дата последней операции</h5>
-											<span class="report-data-value">2015-10-08</span>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
 										</li>
 										<li class="report-data-item">
 											<h5 class="report-data-title">Дата последней операции</h5>
-											<span class="report-data-value">2015-10-08</span>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
 										</li>
 									</ul>
 								</li>
-								<li id="report-category-8" class="report-category">
+								<li class="report-category">
 									<h4 class="report-category-title">Информация о розыске ТС в системе МВД России</h4>
 									<ul class="report-data column single">
 										<li class="report-data-item">
-											<span class="report-data-value">ГИБДД подтвердило, что автомобиль не числится в угоне.</span>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
 										</li>
 									</ul>
 								</li>
-								<li id="report-category-9" class="report-category">
+								<li class="report-category">
 									<h4 class="report-category-title">Информация о наложении ограничений в Госавтоинспекции на ТС</h4>
 									<ul class="report-data column single">
 										<li class="report-data-item">
-											<span class="report-data-value">Ограничений нет (проверено в ГИБДД).</span>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
 										</li>
 									</ul>
 								</li>
-								<li id="report-category-10" class="report-category">
+								<li class="report-category">
 									<h4 class="report-category-title">Утилизация</h4>
 									<ul class="report-data column single">
 										<li class="report-data-item">
-											<span class="report-data-value">Автомобиль не был утилизирован (проверено в ГИБДД).</span>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
 										</li>
 									</ul>
 								</li>
-								<li id="report-category-11" class="report-category">
+								<li class="report-category">
 									<h4 class="report-category-title">Использование автомобиля в качестве такси</h4>
 									<ul class="report-data column single">
 										<li class="report-data-item">
-											<span class="report-data-value">На автомобиль не выдавалась лицензия на такси.</span>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
 										</li>
 									</ul>
 								</li>
-								<li id="report-category-12" class="report-category">
+								<li class="report-category">
 									<h4 class="report-category-title">Информация о нахождении в залоге у банков</h4>
 									<ul class="report-data">
 										<li class="report-data-item">
 											<h5 class="report-data-title">Дата регистрации</h5>
-											<span class="report-data-value">5.10.2015</span>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
 										</li>
 										<li class="report-data-item">
 											<h5 class="report-data-title">Номер уведомления</h5>
-											<span class="report-data-value">2015-000-953173-757</span>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
 										</li>
 										<li class="report-data-item">
 											<h5 class="report-data-title">Имущество</h5>
-											<span class="report-data-value">VIN: NLAFD75308W072210</span>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
 										</li>
 										<li class="report-data-item">
 											<h5 class="report-data-title">Залогодержатель</h5>
-											<span class="report-data-value">Иванов Иван Иванович (02.04.1992)</span>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
 										</li>
 										<li class="report-data-item">
 											<h5 class="report-data-title">Залогодатель</h5>
-											<span class="report-data-value">Банк СОЮЗ(акционерное общество)</span>
+											<span class="report-data-value">
+												<span class="locked-data">
+													<span class="icon icon-lock"></span>
+													Доступно в полном отчёте
+												</span>
+											</span>
 										</li>
 									</ul>
 								</li>
 							</ul>
-							<div class="report-buttons">
-								<a class="button rounded" href="#">
-									<span class="icon icon-print print"></span>
-									Версия для печати
-								</a>
-								<a class="button rounded" href="#">
-									<span class="icon icon-pdf pdf"></span>
-									PDF для печати
-								</a>
-							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- <section class="promo hidden">
+		<section class="promo hidden">
 			<div class="container">
 				<div class="section-content">
 					<div class="row">
@@ -334,8 +464,8 @@
 					</div>
 				</div>
 			</div>
-		</section> -->
-		<section class="offers">
+		</section>
+		<section class="offers hidden">
 			<div class="container">
 				<div class="section-header">
 					<h2 class="section-headline">
@@ -383,7 +513,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="features">
+		<section class="features hidden">
 			<div class="container">
 				<div class="section-content">
 					<div class="row">
@@ -423,11 +553,117 @@
 				</div>
 			</div>
 		</section>
+		<section class="questions">
+			<div class="container">
+				<div class="section-content">
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-sm-3">
+							<div class="question">
+								<div class="question-icon">
+									<span class="icon icon-zoom-lg"></span>
+								</div>
+								<span class="question-text">Вы уверены, что авто не числится в угоне?</span>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-3">
+							<div class="question">
+								<div class="question-icon">
+									<span class="icon icon-crash"></span>
+								</div>
+								<span class="question-text">А сколько раз он попадал в ДТП?</span>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-3">
+							<div class="question">
+								<div class="question-icon">
+									<span class="icon icon-speedo-lg"></span>
+								</div>
+								<span class="question-text">Знаете реальный пробег?</span>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-3">
+							<div class="question">
+								<div class="question-icon">
+									<span class="icon icon-taxi-car"></span>
+								</div>
+								<span class="question-text">Уверены, что авто не использовался в такси?</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="payment">
+			<div class="container" id="buyForm">
+				<div class="section-content">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2">
+							<div class="payment-form">
+								<div class="section-form">
+									<h4 class="form-headline">Вся правда об автомобиле по цене бизнес ланча!</h4>
+									<div class="report-price" data-base="319">
+										<span class="old-price">450 р.</span>
+										<span class="new-price">319 р.</span>
+										<span class="pay-price hidden">319</span>
+									</div>
+									<form action="https://money.yandex.ru/eshop.xml" method="POST">
+											<input type="hidden" name="shopId" value="113311" />
+											<input type="hidden" name="scid" value="97661" />
+											<input type="hidden" name="sum" value="450" />
+											<input type="hidden" name="customerNumber" value="" />
+											<input type="hidden" name="cps_email" value="" />
+											<input type="hidden" name="cps_phone" value="" />
+											<input type="hidden" name="cb_order_id" value="" />
+											<input type="hidden" name="vin" value="" />
+											<input type="hidden" name="cb_response_url" value="http://<?php echo $_SERVER["HTTP_HOST"];?>" />
+										    <!-- <input type="hidden" name="shopSuccessURL" value="http://checkauto.cars-bazar.ru/" /> -->
+										    <input type="hidden" name="shopSuccessURL" value="http://vin.jedpad.com/" />
+										    <input type="hidden" name="shopFailURL" value="http://cars-bazar.ru" />
+										<div class="input-group">
+											<input id="promo" type="checkbox">
+											<label for="promo">Ввести промо-код</label>
+										</div>
+										<input class="text-input" type="text" name="promo">
+										<input class="button rounded promoButton" value="Применить промо-код" type="button">
+										<div class="input-group">
+											<input id="conditions" type="checkbox" required checked>
+											<label for="conditions">Я согласен с <a href="#">условиями сервиса*</a>
+											</label>
+										</div>
+										<input class="button rounded" value="Перейти к оплате" type="submit">
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<ul class="check-categories">
+						<li class="check-category">
+							<span class="icon icon-fssp"></span>
+						</li>
+						<li class="check-category">
+							<span class="icon icon-gibdd"></span>
+						</li>
+						<li class="check-category">
+							<span class="icon icon-rosstat"></span>
+						</li>
+						<li class="check-category">
+							<span class="icon icon-nbki"></span>
+						</li>
+						<li class="check-category">
+							<span class="icon icon-vas-rf"></span>
+						</li>
+						<li class="check-category">
+							<span class="icon icon-fst"></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 		<section class="form">
 			<div class="container">
 				<div class="section-content">
 					<div class="row check-form">
-						<form class="clearfix" action="">
+						<formclass="clearfix" action="">
 							<div class="col-lg-3 col-lg-offset-2 col-md-4 col-sm-6">
 								<input class="text-input" placeholder="VIN" type="text" required>
 							</div>
@@ -474,25 +710,12 @@
 		</footer>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="vendor/ScrollMagic.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 		<script src="vendor/jquery.fancybox.pack.js"></script>
 		<script src="vendor/owl.carousel.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
 		<script src="js/main.js"></script>
-		<script>
-		$(document).ready(function(){
-			// Навигация в отчете
-			var controller = new ScrollMagic.Controller();
-			new ScrollMagic.Scene({
-					duration: $(".report-wrapper").height() - 200,
-					offset: $(".header").height() + 40
-				}).setPin(".report-nav").addTo(controller);
-			$(".pdf").on("click",function(e){
-			    window.open("pdf.php?cb_order_id="+oid,"__blank");
-			});
-			   $(".print").on("click",function(e){
-				window.print();
-			});
-		});
-		</script>
+		<script src="js/parser.js"></script>
+		<script src="js/kassa.js"></script>
+
 	</body>
 </html>
