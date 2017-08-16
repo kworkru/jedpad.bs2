@@ -24,7 +24,7 @@ $(document).ready(function(){
     });
     $(".promoButton").on("click",function(e){
     // $("[name=promo]").on("keyup change",function(e){
-        var val = $(this).val(),base_val = $("#buyForm .report-price").attr("data-base");
+        var val = $("[name=promo]").val(),base_val = $("#buyForm .report-price").attr("data-base");
         if(base_val==null || typeof(base_val)=="undefined"){
             base_val =$("#buyForm .report-price .price").text();
             $("#buyForm .report-price .price").attr("data-base",base_val);

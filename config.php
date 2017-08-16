@@ -1,5 +1,6 @@
 <?php
 $cbConfig = [
+    "source"=>"jedpad.com",
     "rucaptcha" => [
         "key" => "ccca532951426427e0afa43b710f683f"
     ],

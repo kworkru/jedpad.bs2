@@ -8,6 +8,7 @@ $_rqEmail = trim(isset($_REQUEST["email"])?$_REQUEST["email"]:"");
 if(empty($_rqEmail)){echo '{"status":"no email in request"}';exit;}
 $rq = ["vin" => $vin,"email"=>$_rqEmail,"type"=>$type,"status"=>"new","source"=>(preg_match("/jedpad/",$_SERVER['HTTP_HOST'])?"vin.jedpad.com":"checkauto.cars-bazar.ru")];
 $cbdata = $rq;
+$source = core\Config::source();
 $rca = new cb\parse\Rca();
 $zalog = new cb\parse\Zalog();
 $gibdd = new cb\parse\Gibdd();
@@ -27,6 +28,7 @@ if($rq["vin"] == "WF0RXXGCDR8R45807"){
     $sp = new cb\SendPulse;
     $edata = [
         "email"=>$_rqEmail,
+        "source"=>$source,
         "vin"=>$cbdata["vin"],
         "payed_vin"=>$cbdata["payed"],
         //"city"=>"moscow",
@@ -123,10 +125,13 @@ $cbdata["email"] = $_rqEmail;
 $cbdata["report"]=$resultJson;
 $cbdata["reportLink"] = "http://checkauto.cars-bazar.ru/admin/?vin=".$rq["vin"];
 $cb->update($cbdata);
+$promo = json_decode(file_get_contents('mail/promo.invite.json'),true);
 $edata = array(
+    "source"=>$source,
     "email"=>$_rqEmail,
     "vin"=>$cbdata["vin"],
     "payed_vin"=>$cbdata["payed"],
+    "promo" => array_shift($promo),
     //"city"=>"moscow",
     //"region"=>"moscow",
     "model"=>$result["history"]["RequestResult"]["vehicle"]["model"],
@@ -135,6 +140,7 @@ $edata = array(
     "year"=>$result["history"]["RequestResult"]["vehicle"]["year"],
     "report"=>$result
 );
+file_put_contents('mail/promo.invite.json',json_encode($promo,JSON_PRETTY_PRINT));
 // $us = new cb\Unisend();
 // $us->addContact($edata);
 $sp = new cb\SendPulse;
