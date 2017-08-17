@@ -113,6 +113,7 @@ if($type == "full"){
 }
 else {
     if(!isset($result["history"])){$result["history"]=json_decode($gibdd->history($rq),true);}
+    if(!isset($result["dtp"])||count($result["dtp"])==0){$result["dtp"]=json_decode($gibdd->dtp($rq),true);}
     if(!isset($result["vin"])){$result["vin"]=$decodeVIN->get($rq["vin"]);}
     //$result["status"] = (isset($result["order"]) && isset($result["history"]))?"small":"partly";
     $result["status"] = "small";
