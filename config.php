@@ -2,7 +2,7 @@
 $cbConfig = [
     "source"=>"jedpad.com",
     "rucaptcha" => [
-        "key" => "ccca532951426427e0afa43b710f683f"
+        "key" => "1e5ff4cec1798d0cdb0b700461ff1ba7"
     ],
     "unisend" =>[
         "host" => "https://api.unisender.com/ru/api",

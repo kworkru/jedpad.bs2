@@ -1172,9 +1172,10 @@ $(document).ready(function(){
                         ]);
                         $cu.append('<li class="report-category"><h4 class="report-category-title">Данные таможни</h4><ul class="report-data"><li class="report-data-item"><h5 class="report-data-title">Дата декларации</h5><span class="report-data-value"><span class="locked-data"><span class="icon icon-lock"></span>Доступно в полном отчёте</span></span></li><li class="report-data-item"><h5 class="report-data-title">Страна вывоз</h5><span class="report-data-value"><span class="locked-data"><span class="icon icon-lock"></span>Доступно в полном отчёте</span></span></li></ul></li><li class="report-category"><h4 class="report-category-title">Данные ОСАГО</h4><ul class="report-data"><li class="report-data-item"><h5 class="report-data-title">Дата запроса действительности полиса</h5><span class="report-data-value"><span class="locked-data"><span class="icon icon-lock"></span>Доступно в полном отчёте</span></span></li><li class="report-data-item"><h5 class="report-data-title">Серия договора</h5><span class="report-data-value"><span class="locked-data"><span class="icon icon-lock"></span>Доступно в полном отчёте</span></span></li><li class="report-data-item"><h5 class="report-data-title">Номер договора</h5><span class="report-data-value"><span class="locked-data"><span class="icon icon-lock"></span>Доступно в полном отчёте</span></span></li><li class="report-data-item"><h5 class="report-data-title">Ограничения лиц допущенных к управлению ТС</h5><span class="report-data-value"><span class="locked-data"><span class="icon icon-lock"></span>Доступно в полном отчёте</span></span></li><li class="report-data-item"><h5 class="report-data-title">Страховая компания</h5><span class="report-data-value"><span class="locked-data"><span class="icon icon-lock"></span>Доступно в полном отчёте</span></span></li><li class="report-data-item"><h5 class="report-data-title">Примерная стоимость ОСАГО на 1 год</h5><span class="report-data-value"><span class="locked-data"><span class="icon icon-lock"></span>Доступно в полном отчёте</span></span></li></ul></li><li class="report-category"><h4 class="report-category-title">Пробег автомобиля</h4><ul class="report-data"><li class="report-data-item"><h5 class="report-data-title">Значение</h5><span class="report-data-value"><span class="locked-data"><span class="icon icon-lock"></span>Доступно в полном отчёте</span></span></li></ul></li>');
 
-                        $cc = $('<li id="report-category-5" class="report-category"></li>').appendTo($cu);$cc.append('<h4 class="report-category-title">Сведения об участии в ДТП</h4>');
+                        $cc = $('<li id="report-category-5" class="report-category"></li>').appendTo($cu);
                         if(d.dtp!=null && typeof(d.dtp)!="undefined"&& typeof(d.dtp.RequestResult)!="undefined" && d.dtp.RequestResult.Accidents.length){
-                            putData($cc,[{title:"В ГИБДД имеются сведения о ДТП с участием этого авто. Рекомендуем получить полный отчет."}]);
+                            $cc.append('<h4 class="report-category-title" style="background-color:red">Сведения об участии в ДТП</h4>');
+                            putData($cc,[{title:'В ГИБДД имеются сведения о ДТП с участием этого авто. <a href="#buyForm" style="color:rgba(0,0,0,.9);text-decoration:underline;">Рекомендуем получить полный отчет</a>.'}]);
                             // var dtp = [];
                             // for(var i in d.dtp.RequestResult.Accidents){
                             //     dtp.push(
@@ -1190,6 +1191,7 @@ $(document).ready(function(){
                             // putData($cc,dtp);
                         }
                         else {
+                            $cc.append('<h4 class="report-category-title">Сведения об участии в ДТП</h4>');
                             putData($cc,[
                                 {title:"Данные не зафиксированы",hint:'Мы не смогли найти факты, которые указывают на наличие ДТП.<br>Тем не менее, это не означает, что данный автомобиль НЕ УЧАСТВОВАЛ в ДТП'}
                             ]);
