@@ -7,7 +7,8 @@
 chdir("../");
 include("autoload.php");
 $rq = $_REQUEST;
-$mailTo = "komarovb777@gmail.com";
+// $mailTo = "komarovb777@gmail.com";
+$mailTo = "yanusdnd@inbox.ru";
 
 $mail = new PHPMailer;
 $mail->isSMTP();
