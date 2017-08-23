@@ -83,14 +83,23 @@
 				</div>
 				<div class="row check-form">
 					<form class="clearfix" action="reports.php">
-						<div class="col-lg-3 col-lg-offset-2 col-md-4 col-sm-6">
-							<input class="text-input" placeholder="VIN" type="text" required name="vin">
+					<div class="col-lg-3 col-lg-offset-2 col-md-4 col-sm-6">
+
+					<?php if($_REQUEST['vin']){
+						echo '<input class="text-input" placeholder="VIN" type="text" required name="vin" value="' . $_REQUEST['vin'] . '">';
+					}else{
+						echo '<input class="text-input" placeholder="VIN" type="text" required name="vin">';
+					}?>
 						</div>
 						<div class="col-lg-3 col-md-4 col-sm-6">
-							<input class="text-input" placeholder="E-Mail для отчета" type="text" required  name="email">
+							<?php if($_REQUEST['email']){
+								echo '<input class="text-input" placeholder="E-Mail для отчета" type="text" required  name="email" value="' . $_REQUEST['email'] . '">';
+							}else{
+								echo '<input class="text-input" placeholder="E-Mail для отчета" type="text" required  name="email">';
+							}?>
 						</div>
 						<div class="col-lg-2 col-md-4 col-sm-12">
-							<input class="button" value="Проверить авто" type="submit">
+							<input id="verh-vin-enter" class="button" value="Проверить авто" type="submit">
 						</div>
 					</form>
 					<div class="col-lg-3 col-lg-offset-7 col-md-4 col-md-offset-8 full-report-link">
@@ -379,7 +388,7 @@
 							<div class="about-block blue">
 								<h2 class="about-block-title">Как это работает?</h2>
 								<p class="about-block-text">
-									Для того, чтобы получить отчет, введите vin номер и нажмите кнопку «ПРОВЕРИТЬ». После этого у Вас на экране появится краткий отчет. В содержимом отчета доступна информация о наличии сведений по данному автомобилю. Чтобы получить полную версию отчета онлайн и копию отчета на E-mail, необходимо ввести адрес электронной почты и нажать кнопку «Перейти к оплате». Стоимость полного отчета 319 ₽.
+									Для того, чтобы получить отчет, введите vin номер и нажмите кнопку «ПРОВЕРИТЬ». После этого у Вас на экране появится краткий отчет. В содержимом отчета доступна информация о наличии сведений по данному автомобилю. Чтобы получить полную версию отчета онлайн и копию отчета на E-mail, необходимо ввести адрес электронной почты и нажать кнопку «Перейти к оплате». Стоимость полного отчета 219 ₽.
 								</p>
 							</div>
 						</div>
@@ -503,7 +512,7 @@
 								<input class="text-input" placeholder="E-Mail для отчета" type="text" required  name="email">
 							</div>
 							<div class="col-lg-2 col-md-4 col-sm-12">
-								<input class="button" value="Проверить авто" type="submit">
+								<input id="niz-vin-enter" class="button" value="Проверить авто" type="submit">
 							</div>
 						</form>
 						<div class="col-lg-3 col-lg-offset-7 col-md-12 full-report-link">
@@ -546,5 +555,34 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/parser.js"></script>
+		<!-- Yandex.Metrika counter -->
+<!-- <script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter45236304 = new Ya.Metrika({
+                    id:45236304,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script> -->
+<noscript><div><img src="https://mc.yandex.ru/watch/45236304" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 	</body>
 </html>

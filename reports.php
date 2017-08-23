@@ -119,16 +119,16 @@
 					</div>
 					<div class="col-lg-9 col-md-8 vin-report">
 						<div class="section-header">
-							<h4 class="section-headline">Краткий отчет</h4>
+							<h4 class="section-headline">Краткий отчет по VIN коду</h4>
 						</div>
 						<div class="section-content">
+							<span class="checkable-vin">NLAFD75308W072210</span>
 							<div class="report-buttons">
-								<a class="button rounded" href="#buyForm">
+								<a class="button rounded" href="#buyForm" onclick="scroll_it()">
 									<span class="icon icon-doc"></span>
 									Рекомендуем получить полный отчет
 								</a>
 							</div>
-							<span class="checkable-vin">NLAFD75308W072210</span>
 							<ul class="report-wrapper">
 								<li class="report-category">
 									<h4 class="report-category-title">Общие сведения об автомобиле</h4>
@@ -602,10 +602,21 @@
 								<div class="section-form">
 									<h4 class="form-headline">Вся правда об автомобиле по цене бизнес ланча!</h4>
 									<div class="report-price" data-base="219">
-										<span class="old-price">450 р.</span>
-										<span class="new-price">219 р.</span>
+										<span class="old-price">450 &#8381;</span>
+										<span class="new-price">219 &#8381;</span>
 										<span class="pay-price hidden">219</span>
 									</div>
+									<script>
+									function valueChanged(){
+										if($('#promo').is(":checked")){   
+											$("input[name='promo']").show();
+											$(".promoButton").show();
+										}else{
+											$("input[name='promo']").hide();
+											$(".promoButton").hide();
+										}
+									}
+									</script>
 									<form action="https://money.yandex.ru/eshop.xml" method="POST">
 											<input type="hidden" name="shopId" value="113311" />
 											<input type="hidden" name="scid" value="97661" />
@@ -620,7 +631,7 @@
 										    <input type="hidden" name="shopSuccessURL" value="http://vin.jedpad.com/" />
 										    <input type="hidden" name="shopFailURL" value="http://cars-bazar.ru" />
 										<div class="input-group">
-											<input id="promo" type="checkbox">
+											<input id="promo" type="checkbox" onchange="valueChanged()">
 											<label for="promo">Ввести промо-код</label>
 										</div>
 										<input class="text-input" type="text" name="promo">
@@ -658,12 +669,13 @@
 					</ul>
 				</div>
 			</div>
+			<br><br><p><a href="report_example.html" target="_blank" style="text-align:center;color:black;text-decoration:underline;text-decoration-style:dashed;font-weight:bold;">Посмотреть пример полного отчета</a></p>
 		</section>
 		<section class="form">
 			<div class="container">
 				<div class="section-content">
 					<div class="row check-form">
-						<formclass="clearfix" action="">
+						<form class="clearfix" action="">
 							<div class="col-lg-3 col-lg-offset-2 col-md-4 col-sm-6">
 								<input class="text-input" placeholder="VIN" type="text" required>
 							</div>
@@ -699,12 +711,11 @@
 						<span class="footer-info">
 							E-Mail: <a href="mailto:info@jedpad.com">info@jedpad.com</a><br>
 							Телефон: 8 (981) 104-44-72<br>
-							Или <a href="#">напишите нам</a>
 						</span>
 					</div>
 				</div>
 				<span class="copyright">© 2015 - 2017
-					<a href="#">vin.jedpad.com</a>
+					<a href="http://vin.jedpad.com/">vin.jedpad.com</a>
 				</span>
 			</div>
 		</footer>
@@ -716,6 +727,11 @@
 		<script src="js/main.js"></script>
 		<script src="js/parser.js"></script>
 		<script src="js/kassa.js"></script>
-
+		<script>
+		$(document).ready(function(){
+			$("input[name='promo']").hide();
+			$(".promoButton").hide();
+		});
+		</script>
 	</body>
 </html>

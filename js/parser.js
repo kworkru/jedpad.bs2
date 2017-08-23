@@ -1045,6 +1045,15 @@ var validateVin = function(vin){
 };
 
 $(document).ready(function(){
+    console.debug("hear");
+    $("#verh-vin-enter").on("click",function(){
+        yaCounter44533300.reachGoal('verh-vin-enter');
+        return true;
+    });
+    $("#niz-vin-enter").on("click",function(){
+        yaCounter44533300.reachGoal('niz-vin-enter');
+        return true;
+    });
     $(".modal-block").on("click",function(){
         $("[name=packet]").val($(this).closest(".offer-title").html());
     });
