@@ -12,7 +12,7 @@ if(__p!=null&&__p.length>1){
 (function (d, w, c) {
     (w[c] = w[c] || []).push(function() {
         try {
-            w.yaCounter44533300 = new Ya.Metrika({
+            w.yaCounter = new Ya.Metrika({
                 id:45236304,
                 clickmap:true,
                 trackLinks:true,
@@ -95,8 +95,8 @@ var makePDF = function(id,e){
 $("body").on("vb:metrikaLoaded",function(){
     console.debug("vb:metrikaLoaded triggered");
     if(qp.payed=="1"){
-        console.debug(window.yaCounter44533300,'oplata-done occurs');
-        if(window.yaCounter44533300)yaCounter44533300.reachGoal('oplata-done');
+        console.debug(window.yaCounter,'oplata-done occurs');
+        if(window.yaCounter)yaCounter.reachGoal('oplata-done');
     }
 });
 var wmiList = {
@@ -1047,11 +1047,15 @@ var validateVin = function(vin){
 $(document).ready(function(){
     console.debug("hear");
     $("#verh-vin-enter").on("click",function(){
-        yaCounter44533300.reachGoal('verh-vin-enter');
+        yaCounter.reachGoal('verh-vin-enter');
         return true;
     });
     $("#niz-vin-enter").on("click",function(){
-        yaCounter44533300.reachGoal('niz-vin-enter');
+        yaCounter.reachGoal('niz-vin-enter');
+        return true;
+    });
+    $("#oplata-perehod").on("click",function(){
+        yaCounter.reachGoal('oplata-perehod');
         return true;
     });
     $(".modal-block").on("click",function(){
@@ -1237,15 +1241,15 @@ $(document).ready(function(){
 
                     }
                     else if(d.status=="full"){
-                        console.debug(yaCounter44533300,'get-full-report occurs');
-                        yaCounter44533300.reachGoal('get-full-report');
+                        console.debug(yaCounter,'get-full-report occurs');
+                        yaCounter.reachGoal('get-full-report');
                         getFullReport(d,false,qp.example);
                         // $(".promo").removeClass("hidden");
                         $(".features").removeClass("hidden");
                         $(".offers").removeClass("hidden");
                     }
                     // if(qp.type=="full"){
-                    //     yaCounter44533300.reachGoal('get-full-report');
+                    //     yaCounter.reachGoal('get-full-report');
                     //     getFullReport(d);
                     // }
                     // Навигация в отчете
