@@ -126,13 +126,13 @@ $cbdata["email"] = $_rqEmail;
 $cbdata["report"]=$resultJson;
 $cbdata["reportLink"] = "http://checkauto.cars-bazar.ru/admin/?vin=".$rq["vin"];
 $cb->update($cbdata);
-$promo = json_decode(file_get_contents('mail/promo.invite.json'),true);
+// $promo = json_decode(file_get_contents('mail/promo.invite.json'),true);
 $edata = array(
     "source"=>$source,
     "email"=>$_rqEmail,
     "vin"=>$cbdata["vin"],
     "payed_vin"=>$cbdata["payed"],
-    "promo" => array_shift($promo),
+    // "promo" => array_shift($promo),
     //"city"=>"moscow",
     //"region"=>"moscow",
     "model"=>$result["history"]["RequestResult"]["vehicle"]["model"],
@@ -141,9 +141,9 @@ $edata = array(
     "year"=>$result["history"]["RequestResult"]["vehicle"]["year"],
     "report"=>$result
 );
-file_put_contents('mail/promo.invite.json',json_encode($promo,JSON_PRETTY_PRINT));
-// $us = new cb\Unisend();
-// $us->addContact($edata);
+// file_put_contents('mail/promo.invite.json',json_encode($promo,JSON_PRETTY_PRINT));
+$us = new cb\Unisend();
+$us->addContact($edata);
 $sp = new cb\SendPulse;
 $sp->addContact($edata);
 $sp->send($edata);

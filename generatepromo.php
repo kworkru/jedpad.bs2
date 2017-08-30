@@ -3,7 +3,7 @@ $symbs = ["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F","G","H
 $res = [];
 
 for($i=0;$i<2000;$i++){
-    $code = 'CARBAZ2';
+    $code = 'CHKVIN';
     $code.=$symbs[rand(0,count($symbs)-1)];
     $code.=$symbs[rand(0,count($symbs)-1)];
     $code.=$symbs[rand(0,count($symbs)-1)];
@@ -13,7 +13,7 @@ for($i=0;$i<2000;$i++){
     $res[$code]=[
         "used"=>"1",
         "was"=>"1",
-        "discount"=>50,
+        "discount"=>100,
         "type"=>"once",
         "date"=>date("Y-m-d H:i:s"),
         "who"=>"local"

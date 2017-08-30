@@ -2,8 +2,8 @@
 namespace cb;
 class Promo{
     protected $codes=[];
-    // protected $promoStore = "/home/admin/web/checkauto.cars-bazar.ru/public_html/admin/promo.json";
-    protected $promoStore = "admin/promo.json";
+    protected $promoStore = "/home/admin/web/checkauto.cars-bazar.ru/public_html/admin/promo.json";
+    // protected $promoStore = "admin/promo.json";
     public function __construct(){
         $this->loadCodes();
     }

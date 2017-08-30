@@ -10,7 +10,7 @@ class Unisend{
     public function __construct(){
         $this->_cfg = Config::unisend();
     }
-    public function addContact($d){
+    public function addContact($d,$send=false){
         if(!isset($d["email"]))return[];
         $req=[];
         $result = [];
@@ -38,16 +38,18 @@ class Unisend{
         if(isset($d["payed_vin"]))$data["fields"]["payed_vin"]=$d["payed_vin"];
         $result[] = $this->subscribe($data);
         // new methods
-        $se = $this->sendEmail([
-            "email" => $d["email"],
-            "sender_name" => $this->_cfg["sender"]["name"],
-            "sender_email" => $this->_cfg["sender"]["email"],
-            "subject" => "Проверка VIN ".$d["vin"],
-            "body" => $this->getSendEmailBody($d),
-            // "attachments" => $this->getSendEmailAttachments($d),
-            "list_id"=>$this->_cfg["list_ids"],
-        ]);
-        $result[]=$se;
+        if($send){
+            $se = $this->sendEmail([
+                "email" => $d["email"],
+                "sender_name" => $this->_cfg["sender"]["name"],
+                "sender_email" => $this->_cfg["sender"]["email"],
+                "subject" => "Проверка VIN ".$d["vin"],
+                "body" => $this->getSendEmailBody($d),
+                // "attachments" => $this->getSendEmailAttachments($d),
+                "list_id"=>$this->_cfg["list_ids"],
+            ]);
+            $result[]=$se;
+        }
         // $cem =$this->createEmailMessage([
         //     "sender_name" => $this->_cfg["sender"]["name"],
         //     "sender_email" => $this->_cfg["sender"]["email"],
@@ -74,6 +76,7 @@ class Unisend{
             $http = new Http();
             $http->headers = ["Accept"=>"application/json, text/javascript, */*; q=0.01"];
             $res = $http->fetch($this->_cfg["host"]."/{$method}","POST",$req);
+            Log::debug($res);
         }
         catch(\Exception $e){
             Log::debug($e);

@@ -1226,18 +1226,18 @@ $(document).ready(function(){
                         //     {title:"Сведения о покупке в лизинг",code:"hidden",value:"<span class=\"locked-data\"><span class=\"icon icon-lock\"></span>Доступно в полном отчёте</span>"}
                         // ]);
                         $(".vin-report").show();
-                        $.ajax({
-                            url:"/mail/invite.php",
-                            dataType:"json",
-                            data:{
-                                vin:qp.vin,
-                                email:qp.email,
-                                cb_order_id:order.id
-                            },
-                            success:function(d){
-                                console.debug(d);
-                            }
-                        });
+                        // $.ajax({
+                        //     url:"/mail/invite.php",
+                        //     dataType:"json",
+                        //     data:{
+                        //         vin:qp.vin,
+                        //         email:qp.email,
+                        //         cb_order_id:order.id
+                        //     },
+                        //     success:function(d){
+                        //         console.debug(d);
+                        //     }
+                        // });
 
                     }
                     else if(d.status=="full"){
